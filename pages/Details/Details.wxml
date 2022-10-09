@@ -1,2 +1,10 @@
 <!--轮播图页面、详情页-->
-<text>轮播图页面</text>
+
+<background>
+  <view class="container">
+    <text>轮播图页面</text>
+    <button>
+      <navigator hover-class="none" url="../Home/Home" open-type="reLaunch">返回主页</navigator>
+    </button>
+  </view>
+</background>

@@ -1,0 +1,7 @@
+<!--components/background/background.wxml-->
+<!--Home页-->
+<view class="container">
+  <image class="bg" src="../../img/bg2.png" />
+  <image class="bg_circle" src="../../img/bg_circle.png"></image>
+  <slot></slot>
+</view>

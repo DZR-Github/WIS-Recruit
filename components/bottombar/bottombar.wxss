@@ -1,0 +1,13 @@
+/* components/bottomBar/bottomBar.wxss */
+
+.btnContainer {
+  display: flex;
+  bottom: 200rpx;
+}
+
+.Btn {
+  width: 100rpx;
+  margin: 15rpx;
+  text-align: center;
+  background-color: chartreuse;
+}

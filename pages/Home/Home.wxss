@@ -1,1 +1,21 @@
 /* pages/Home.wxss */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.middle {
+  margin-top: 200rpx;
+  width: 485rpx;
+  position: relative;
+}
+
+.nav {
+  width: 271rpx;
+  height: 134rpx;
+  text-align: center;
+  line-height: 134rpx;
+  position: relative;
+}

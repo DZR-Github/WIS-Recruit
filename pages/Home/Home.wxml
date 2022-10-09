@@ -1,2 +1,19 @@
-<!--Home页-->
-<text>Home</text>
+<background>
+  <view class="container">
+    <image style="width:600rpx;height:360rpx;" src="../../img/WIS.png"></image>
+    <view style="margin-top: 500rpx;">
+      <view class="nav">
+        <image style="position: absolute;width: 271rpx;height: 134rpx;top: 0;left: 0;" mode="scaleToFill" src="../../img/button1.png"></image>
+        <navigator style="position: absolute;width: 271rpx;height: 134rpx;top: 0;left: 0;" hover-class="none" open-type="redirect" url="../Recruit/Recruit">
+          <image style="width: 72rpx; height: 52rpx;" mode="scaleToFill" src="../../img/entry.png" />
+        </navigator>
+      </view>
+      <view class="nav" style="margin-top: 50rpx;">
+        <image style="width: 271rpx;height: 134rpx;" mode="scaleToFill" src="../../img/button1.png"></image>
+        <navigator style="position: absolute;width: 271rpx;height: 134rpx;top: 0;left: 0;" hover-class="none" open-type="redirect" url="../Details/Details">
+          <image style="width: 72rpx; height: 52rpx;" mode="scaleToFill" src="../../img/know.png" />
+        </navigator>
+      </view>
+    </view>
+  </view>
+</background>

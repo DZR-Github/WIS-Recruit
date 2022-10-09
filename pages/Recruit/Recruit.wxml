@@ -1,2 +1,9 @@
 <!--报名页-->
-<text>报名页</text>
+<background>
+  <view class="container">
+    <text>报名页</text>
+    <button>
+      <navigator hover-class="none" url="../Home/Home" open-type="reLaunch">返回主页</navigator>
+    </button>
+  </view>
+</background>
