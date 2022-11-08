@@ -1,0 +1,29 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  /* display: flex; */
+  position: relative;
+  z-index: -1;
+}
+
+@keyframes big_circle {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.bg_circle {
+  position: fixed;
+  z-index: -1;
+  width: 700rpx;
+  height: 700rpx;
+  left: -280rpx;
+  top: 600rpx;
+  animation-name: big_circle;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+}

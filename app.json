@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/Progress/Progress",
+    "pages/Home/Home",
+    "pages/Feedback/Feedback",
+    "pages/Information/Information"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": " ",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom",
+    "handleWebviewPreload": "auto"
+  },
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

@@ -1,0 +1,42 @@
+<!-- 主页面 -->
+<!-- 招新方向还没写好 -->
+<view>
+  <!-- 回退按钮 -->
+  <image style="height: 120rpx;width: 180rpx;top: 60rpx; left: -10rpx;position: fixed;" src="../../img/back.png"></image>
+  <!-- 轮播图 -->
+  <swiper current="{{currentIndex}}" bindchange="swiperChange" style="width: 750rpx;height: 1300rpx;" indicator-dots indicator-color="#ffffff" indicator-active-color="#808080">
+    <swiper-item>
+      <view style="margin-top: 150rpx;margin-left: 70rpx;">
+        <image style="width: 600rpx;height: 1100rpx;" src="../../img/mid1.png"></image>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view style="margin-left: 80rpx;">
+        <image style="width: 600rpx;height: 1250rpx;" src="../../img/web.png"></image>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view style="margin-left: 70rpx;">
+        <image style="width: 600rpx;height: 1250rpx;" src="../../img/backstage.png"></image>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view style="margin-left: 80rpx;">
+        <image style="width: 600rpx;height: 1250rpx;" src="../../img/web.png"></image>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view style="margin-left: 70rpx;">
+        <image style="width: 600rpx;height: 1250rpx;" src="../../img/backstage.png"></image>
+      </view>
+    </swiper-item>
+  </swiper>
+  <!-- 左、右按钮 -->
+  <view bindtap="moveLeft" style="position: fixed;bottom: 195rpx;left: 20rpx;width: 110rpx;height: 110rpx;">
+    <image style="position: fixed;bottom: 160rpx;left: -20rpx;width: 180rpx;height: 180rpx;" src="../../img/left.png"></image>
+  </view>
+  <view bindtap="moveRight" style="position: fixed;bottom: 195rpx;right: 20rpx;width: 110rpx;height: 110rpx;">
+    <image style="position: fixed;bottom: 160rpx;right: -20rpx;width: 180rpx;height: 180rpx;" src="../../img/right.png"></image>
+  </view>
+
+</view>

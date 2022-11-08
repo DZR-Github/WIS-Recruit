@@ -1,0 +1,8 @@
+<!-- 主页面 -->
+<view>
+  <background></background>
+  <main style="display: {{selected===0?FLEX:NONE}};"></main>
+  <recruit style="display: {{selected===1?FLEX:NONE}};"></recruit>
+  <mine style="display: {{selected===2?FLEX:NONE}};"></mine>
+  <custom-tab-bar bindtap="change"></custom-tab-bar>
+</view>

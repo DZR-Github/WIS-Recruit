@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "custom-tab-bar": "../../components/custom-tab-bar/index",
+    "main": "../../components/main/main",
+    "mine": "../../components/mine/mine",
+    "recruit": "../../components/recruit/recruit",
+    "background": "../../components/background/background"
+  }
+}

@@ -1,0 +1,26 @@
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 110rpx;
+  background: white;
+  display: flex;
+  /* padding-bottom: constant(safe-area-inset-bottom); */
+  padding-bottom: env(safe-area-inset-bottom);
+  border-top: 1px solid lightgray;
+}
+
+.tab-bar-item {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.item-image {
+  width: 88rpx;
+  height: 96rpx;
+}
