@@ -1,9 +1,0 @@
-/* pages/Recruit/Recruit.wxss */
-.container {
-  width: 750rpx;
-  height: 100%;
-}
-
-page {
-  height: 100%;
-}

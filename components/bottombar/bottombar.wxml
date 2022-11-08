@@ -1,7 +1,0 @@
-<!--components/bottomBar/bottomBar.wxml-->
-<!-- 还没写好 -->
-<view class="btnContainer">
-  <view class="Btn">进度</view>
-  <view class="Btn">了解</view>
-  <view class="Btn">报名</view>
-</view>
