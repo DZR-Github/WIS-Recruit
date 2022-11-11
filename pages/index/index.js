@@ -1,9 +1,9 @@
 // index.js
 // 获取应用实例
-
+let app = getApp()
 Page({
   data: {
-    selected: 0,
+    selected: app.globalData.selected,
     FLEX: "flex",
     NONE: "none",
     motto: 'Hello World',
@@ -13,7 +13,16 @@ Page({
     canIUseGetUserProfile: false,
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
   },
+  // observers: {
+  //   'app.globalData.selected': (app) => {
+  //     this.setData({
+  //       selected: app.globalData.selected
+  //     })
+  //   }
+  // },
+
   change(e) {
+    // console.log(e)
     const app = getApp()
     this.setData({
       selected: app.globalData.selected
@@ -26,11 +35,19 @@ Page({
     })
   },
   onLoad() {
+    if (this.data.selected != app.globalData.selected) {
+      this.setData({
+        selected: app.globalData.selected
+      })
+    }
     if (wx.getUserProfile) {
       this.setData({
         canIUseGetUserProfile: true
       })
     }
+    setInterval(() => {
+      // console.log(this.data.selected)
+    }, 2000)
   },
   getUserProfile(e) {
     // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
@@ -54,25 +71,3 @@ Page({
     })
   }
 })
-
-// "tabBar": {
-//   "custom": true,
-//   "color": "4E5969",
-//   "selectedColor": "4E5969",
-//   "list": [{
-//       "selectedIconPath": "/img/main_active.png",
-//       "iconPath": "/img/main.png",
-//       "pagePath": "pages/Home/Home"
-//     },
-//     {
-//       "selectedIconPath": "/img/recruit_active.png",
-//       "iconPath": "/img/recruit.png",
-//       "pagePath": "pages/Recruit/Recruit"
-//     },
-//     {
-//       "selectedIconPath": "/img/mine_active.png",
-//       "iconPath": "/img/mine.png",
-//       "pagePath": "pages/Mine/Mine"
-//     }
-//   ]
-// },

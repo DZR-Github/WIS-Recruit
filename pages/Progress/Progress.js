@@ -5,7 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    write: 1,
+    interview: 1,
+    firstItem: 1,
+    secondItem: 1,
+    red: "red",
+    green: "#84f59b"
   },
 
   /**

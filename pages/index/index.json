@@ -1,9 +1,10 @@
 {
   "usingComponents": {
     "custom-tab-bar": "../../components/custom-tab-bar/index",
-    "main": "../../components/main/main",
-    "mine": "../../components/mine/mine",
-    "recruit": "../../components/recruit/recruit",
-    "background": "../../components/background/background"
+    "main": "../../components/main/index",
+    "mine": "../../components/mine/index",
+    "recruit": "../../components/recruit/index",
+    "background": "../../components/background/index",
+    "stars": "../../components/stars/index"
   }
 }

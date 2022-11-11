@@ -1,1 +1,24 @@
 /* pages/Feedback/Feedback.wxss */
+.feedbackBox {
+  margin-top: 180rpx;
+  background-color: rgba(128, 128, 128, 0.226);
+  width: 500rpx;
+  height: 500rpx;
+  display: inline-block;
+  border-radius: 20rpx;
+  padding: 20rpx;
+  color: white;
+  text-align: start;
+}
+
+.btn {
+  margin-top: 50rpx;
+  width: 300rpx;
+  height: 80rpx;
+}
+
+.Input {
+  width: 460rpx;
+  height: 460rpx;
+  word-break: break-all;
+}

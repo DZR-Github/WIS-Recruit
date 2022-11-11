@@ -1,0 +1,63 @@
+.progressBox {
+  width: 80vw;
+  height: 70vh;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  margin-top: 200rpx;
+  border-radius: 30rpx;
+  position: relative;
+}
+
+.bar {
+  position: absolute;
+  width: 8rpx;
+  height: 700rpx;
+  background-color: #42FFFF;
+  top: 100rpx;
+  left: 120rpx;
+  border-radius: 8rpx;
+}
+
+.dots {
+  position: absolute;
+  left: 400rpx;
+
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 20rpx;
+}
+
+.text {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 120rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  position: absolute;
+  left: 350rpx;
+  top: 30rpx;
+}
+
+.text2 {
+  position: absolute;
+  top: 900rpx;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
+.text3 {
+  position: absolute;
+  left: 150rpx;
+  color: white;
+  font-size: large;
+}
+
+.text4 {
+  position: absolute;
+  top: 992rpx;
+  color: white;
+  font-size: small;
+}

@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/Progress/Progress",
     "pages/Home/Home",
+    "pages/Progress/Progress",
+    "pages/index/index",
+
     "pages/Feedback/Feedback",
     "pages/Information/Information"
   ],

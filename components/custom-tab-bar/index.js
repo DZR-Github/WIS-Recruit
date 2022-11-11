@@ -1,7 +1,13 @@
+let app = getApp()
 Component({
-
+  properties: {
+    Selected: {
+      type: Number,
+      value: 0
+    }
+  },
   data: {
-    selected: 0,
+    selected: app.globalData.selected,
     list: [{
         selectedIconPath: "../../img/main_active.png",
         iconPath: "../../img/main.png"
@@ -16,7 +22,22 @@ Component({
       }
     ]
   },
-  attached() {},
+  attached() {
+    if (this.data.selected != app.globalData.selected) {
+      this.setData({
+        selected: app.globalData.selected
+      })
+    }
+  },
+  pageLifetimes: {
+
+    // 组件所在页面的生命周期函数
+
+    show: () => {},
+
+    hide: () => {}
+
+  },
   methods: {
     switchTab(e) {
       let app = getApp()
@@ -25,7 +46,6 @@ Component({
         selected: data.index
       })
       app.globalData.selected = data.index
-      // console.log(app.globalData.selected)
     }
   }
 

@@ -1,2 +1,16 @@
 <!--pages/Home/Home.wxml-->
 <!-- 首页 -->
+
+<view style="width: 100vw;height: 100vh;overflow: hidden;">
+  <background></background>
+  <stars></stars>
+  <view style="width: 100vw;text-align: center;">
+    <image style="width: 600rpx;height: 360rpx;margin-top: 200rpx;" src="../../img/WIS.png"></image>
+  </view>
+  <view style="width: 100vw;text-align: center;">
+    <image style="width: 500rpx;height: 260rpx;margin-top: 200rpx;" src="../../img/Home.png"></image>
+  </view>
+  <navigator url="{{url}}" open-type="redirect"><button class="Btn">了解我们</button></navigator>
+</view>
+
+<!-- <switchAnimate></switchAnimate> -->

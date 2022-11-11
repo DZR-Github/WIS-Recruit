@@ -1,0 +1,26 @@
+:root {
+  --num: 200;
+}
+
+
+/* 方法一：
+	background-color:none 依旧会有阴影效果。不修改opacity属性会有 0.7的透明效果 
+	因为系统属性写法为： 
+	.navigator-hover {
+		background-color: rgba(0, 0, 0, .1);
+		opacity: .7;
+	}
+*/
+.navigator-hover {
+  background-color: transparent !important;
+  opacity: 1;
+}
+
+navigator.navigator-hover {
+  background-color: transparent !important;
+  opacity: 1;
+}
+
+page {
+  background-color: #3d405b;
+}

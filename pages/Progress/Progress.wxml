@@ -1,1 +1,34 @@
 <!--进度条页面-->
+
+<view style="width: 100vw;height: 100vh;text-align: center;">
+  <!-- <background></background> -->
+  <navigator url="/pages/index/index" open-type="navigateBack">
+    <view style="height: 120rpx;width: 180rpx;top: 60rpx; left: -10rpx;position: fixed;z-index: 1;">
+      <image style="height: 120rpx;width: 180rpx;top: 60rpx; left: -10rpx;position: fixed;" src="../../img/back.png">
+      </image>
+    </view>
+  </navigator>
+  <image style="width: 250rpx;height: 75rpx;position: relative;top: 130rpx;" src="../../img/progressTop.png"></image>
+  <!-- <view style="color: white;text-align: center;width: 100vw;position: relative;top: 150rpx;">进度条页面</view> -->
+  <view class="progressBox">
+    <view class="text">状态</view>
+    <view class="bar"></view>
+    <image style="width: 55rpx;height: 60rpx;position: absolute;top: 100rpx;left: 30rpx;" src="../../img/progress.png"></image>
+    <image style="width: 55rpx;height: 60rpx;position: absolute;top: 300rpx;left: 30rpx;" src="../../img/progress.png"></image>
+    <image style="width: 55rpx;height: 60rpx;position: absolute;top: 500rpx;left: 30rpx;" src="../../img/progress.png"></image>
+    <image style="width: 55rpx;height: 60rpx;position: absolute;top: 700rpx;left: 30rpx;" src="../../img/progress.png"></image>
+    <view style="top: 110rpx;" class="text3">笔试考核</view>
+    <view style="top: 310rpx;" class="text3">面试考核</view>
+    <view style="top: 510rpx;" class="text3">一轮项目考核</view>
+    <view style="top: 710rpx;" class="text3">二轮项目考核</view>
+    <view style="top: 125rpx;background-color: {{write===0?red:green}};" class="dots"></view>
+    <view style="top: 328rpx;background-color: {{interview===0?red:green}};" class="dots"></view>
+    <view style="top: 529rpx;background-color: {{firstItem===0?red:green}};" class="dots"></view>
+    <view style="top: 730rpx;background-color: {{secondItem===0?red:green}};" class="dots"></view>
+    <view class="text2">您的总考核结果：通过！</view>
+    <view class="dots" style="top: 1000rpx;left: 150rpx;background-color: #84f59b;"></view>
+    <view class="text4" style="left: 180rpx;">已通过</view>
+    <view class="dots" style="top: 1000rpx;left: 320rpx;background-color: red;"></view>
+    <view class="text4" style="left: 350rpx;">未通过</view>
+  </view>
+</view>

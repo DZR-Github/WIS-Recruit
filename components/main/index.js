@@ -4,6 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    url: "/pages/Home/Home",
     currentIndex: 0, //记录轮播图的位置
     sumIndex: 5
   },

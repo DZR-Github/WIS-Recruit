@@ -1,0 +1,47 @@
+<!-- 主页面 -->
+<!-- 招新方向还没写好 -->
+<view style="width: 100vw;height: 100vh;overflow: hidden;">
+  <!-- 回退按钮 -->
+  <stars></stars>
+  <navigator url="{{url}}" open-type="redirect">
+    <view style="height: 120rpx;width: 180rpx;top: 60rpx; left: -10rpx;position: fixed;z-index: 1;">
+      <image style="height: 120rpx;width: 180rpx;top: 60rpx; left: -10rpx;position: fixed;" src="../../img/back.png">
+      </image>
+    </view>
+  </navigator>
+  <!-- 轮播图 -->
+  <swiper class="banner" current="{{currentIndex}}" bindchange="swiperChange" style="width: 100vw;height: 1300rpx;text-align: center;" indicator-dots>
+    <swiper-item>
+      <view style="margin-top: 150rpx;">
+        <image style="width: 600rpx;height: 1100rpx;" src="../../img/mid1.png"></image>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view>
+        <image style="width: 640rpx;height: 1250rpx;" src="../../img/web.png"></image>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view>
+        <image style="width: 640rpx;height: 1250rpx;" src="../../img/backstage.png"></image>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view>
+        <image style="width: 640rpx;height: 1250rpx;" src="../../img/Android.png"></image>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view>
+        <image style="width: 640rpx;height: 1250rpx;" src="../../img/UI.png"></image>
+      </view>
+    </swiper-item>
+  </swiper>
+  <!-- 左、右按钮 -->
+  <view bindtap="moveLeft" class="left">
+    <image class="leftImage" src="../../img/left.png"></image>
+  </view>
+  <view bindtap="moveRight" class="right">
+    <image class="rightImage" src="../../img/right.png"></image>
+  </view>
+</view>

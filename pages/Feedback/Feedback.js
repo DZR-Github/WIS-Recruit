@@ -7,6 +7,10 @@ Page({
   data: {
 
   },
+  setSelected() {
+    let app = getApp()
+    app.globalData.selected = 2
+  },
 
   /**
    * 生命周期函数--监听页面加载

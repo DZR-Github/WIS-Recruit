@@ -1,0 +1,12 @@
+<!--components/switchAnimate/index.wxml-->
+<!-- 流星动画 -->
+<view>
+  <view class="stars_container">
+    <view class="shooting_star"></view>
+    <view class="shooting_star"></view>
+    <view class="shooting_star"></view>
+    <view class="shooting_star"></view>
+    <view class="shooting_star"></view>
+    <view class="shooting_star"></view>
+  </view>
+</view>

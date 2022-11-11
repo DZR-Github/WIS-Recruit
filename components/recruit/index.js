@@ -1,9 +1,14 @@
-// pages/Mine.js
+// pages/Recruit/Recruit.js
 Page({
+  submit(e) {
+    console.log(e.detail.value);
+  },
   /**
    * 页面的初始数据
    */
-  data: {},
+  data: {
+    URL: "woshiURL"
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -12,7 +17,7 @@ Page({
     // if (typeof this.getTabBar === 'function' &&
     //   this.getTabBar()) {
     //   this.getTabBar().setData({
-    //     selected: 2
+    //     selected: 1
     //   })
     // }
   },
@@ -24,7 +29,7 @@ Page({
     // if (typeof this.getTabBar === 'function' &&
     //   this.getTabBar()) {
     //   this.getTabBar().setData({
-    //     selected: 2
+    //     selected: 1
     //   })
     // }
   },
@@ -36,7 +41,7 @@ Page({
     // if (typeof this.getTabBar === 'function' &&
     //   this.getTabBar()) {
     //   this.getTabBar().setData({
-    //     selected: 2
+    //     selected: 1
     //   })
     // }
   },

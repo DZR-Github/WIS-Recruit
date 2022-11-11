@@ -1,0 +1,85 @@
+.banner .wx-swiper-dot {
+  width: 20rpx;
+  height: 5rpx;
+  background-color: #ffffff;
+  border-radius: 0;
+}
+
+.banner .wx-swiper-dot.wx-swiper-dot-active {
+  background-color: #808080;
+  width: 40rpx;
+}
+
+.left {
+  position: fixed;
+  bottom: 195rpx;
+  left: 20rpx;
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.leftImage {
+  position: fixed;
+  bottom: 160rpx;
+  left: -20rpx;
+  width: 180rpx;
+  height: 180rpx;
+  animation: leftAnimate 2s ease infinite;
+}
+
+.right {
+  position: fixed;
+  bottom: 195rpx;
+  right: 20rpx;
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.rightImage {
+  position: fixed;
+  bottom: 160rpx;
+  right: -20rpx;
+  width: 180rpx;
+  height: 180rpx;
+  animation: rightAnimate 2s ease infinite;
+}
+
+@keyframes leftAnimate {
+  0% {
+    width: 180rpx;
+    height: 180rpx;
+    left: -20rpx;
+  }
+
+  50% {
+    width: 185rpx;
+    height: 185rpx;
+    left: -25rpx;
+  }
+
+  100% {
+    width: 180rpx;
+    height: 180rpx;
+    left: -20rpx;
+  }
+}
+
+@keyframes rightAnimate {
+  0% {
+    width: 180rpx;
+    height: 180rpx;
+    right: -20rpx;
+  }
+
+  50% {
+    width: 185rpx;
+    height: 185rpx;
+    right: -25rpx;
+  }
+
+  100% {
+    width: 180rpx;
+    height: 180rpx;
+    right: -20rpx;
+  }
+}

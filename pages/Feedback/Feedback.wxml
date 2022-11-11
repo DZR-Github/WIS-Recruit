@@ -1,2 +1,17 @@
 <!--pages/Feedback/Feedback.wxml-->
 <!-- 用户反馈、评价页 -->
+<view style="text-align: center;">
+  <background></background>
+  <navigator url="/pages/index/index" open-type="navigateBack">
+    <view style="height: 120rpx;width: 180rpx;top: 60rpx; left: -10rpx;position: fixed;z-index: 1;">
+      <image style="height: 120rpx;width: 180rpx;top: 60rpx; left: -10rpx;position: fixed;" src="../../img/back.png">
+      </image>
+    </view>
+  </navigator>
+  <view class="feedbackBox">
+    <!-- <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea> -->
+    <textarea style="width: 490rpx;" placeholder="请在此处输入您的反馈" maxlength="-1" auto-height />
+  </view>
+  <button class="btn">提交</button>
+
+</view>

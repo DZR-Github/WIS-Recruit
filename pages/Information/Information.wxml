@@ -1,2 +1,16 @@
 <!--pages/Information/Information.wxml-->
 <!-- 用户个人信息页 -->
+
+<view>
+  <background></background>
+  <view style="width: 100vw;height: 100vh;text-align: center;">
+    <!-- <background></background> -->
+    <navigator url="/pages/index/index" open-type="navigateBack">
+      <view style="height: 120rpx;width: 180rpx;top: 60rpx; left: -10rpx;position: fixed;z-index: 1;">
+        <image style="height: 120rpx;width: 180rpx;top: 60rpx; left: -10rpx;position: fixed;" src="../../img/back.png">
+        </image>
+      </view>
+    </navigator>
+    <image style="width: 250rpx;height: 75rpx;position: relative;top: 130rpx;" src="../../img/mineMsg.png"></image>
+  </view>
+</view>

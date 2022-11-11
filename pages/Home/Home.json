@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "background": "../../components/background/index",
+    "stars": "../../components/stars/index"
+  }
 }

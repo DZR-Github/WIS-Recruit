@@ -1,13 +1,14 @@
-// pages/Recruit/Recruit.js
+// pages/Mine.js
 Page({
-  submit(e) {
-    console.log(e.detail.value);
-  },
   /**
    * 页面的初始数据
    */
   data: {
-
+    urls: [
+      "/pages/Information/Information",
+      "/pages/Progress/Progress",
+      "/pages/Feedback/Feedback"
+    ]
   },
 
   /**
@@ -17,7 +18,7 @@ Page({
     // if (typeof this.getTabBar === 'function' &&
     //   this.getTabBar()) {
     //   this.getTabBar().setData({
-    //     selected: 1
+    //     selected: 2
     //   })
     // }
   },
@@ -29,7 +30,7 @@ Page({
     // if (typeof this.getTabBar === 'function' &&
     //   this.getTabBar()) {
     //   this.getTabBar().setData({
-    //     selected: 1
+    //     selected: 2
     //   })
     // }
   },
@@ -41,7 +42,7 @@ Page({
     // if (typeof this.getTabBar === 'function' &&
     //   this.getTabBar()) {
     //   this.getTabBar().setData({
-    //     selected: 1
+    //     selected: 2
     //   })
     // }
   },
