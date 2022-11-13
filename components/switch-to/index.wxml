@@ -1,5 +1,0 @@
-<!--components/switchTo/switchTo.wxml-->
-<!-- 点击组件跳转页面 -->
-<view bindtap="onClick">
-  <slot></slot>
-</view>

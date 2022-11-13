@@ -1,11 +1,10 @@
 {
   "pages": [
     "pages/Home/Home",
-    "pages/Progress/Progress",
-    "pages/index/index",
-
     "pages/Feedback/Feedback",
-    "pages/Information/Information"
+    "pages/index/index",
+    "pages/Information/Information",
+    "pages/Progress/Progress"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -9,7 +9,6 @@
     </view>
   </navigator>
   <image style="width: 250rpx;height: 75rpx;position: relative;top: 130rpx;" src="../../img/progressTop.png"></image>
-  <!-- <view style="color: white;text-align: center;width: 100vw;position: relative;top: 150rpx;">进度条页面</view> -->
   <view class="progressBox">
     <view class="text">状态</view>
     <view class="bar"></view>

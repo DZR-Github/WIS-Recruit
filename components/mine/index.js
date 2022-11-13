@@ -14,38 +14,17 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-    // if (typeof this.getTabBar === 'function' &&
-    //   this.getTabBar()) {
-    //   this.getTabBar().setData({
-    //     selected: 2
-    //   })
-    // }
-  },
+  onLoad(options) {},
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady() {
-    // if (typeof this.getTabBar === 'function' &&
-    //   this.getTabBar()) {
-    //   this.getTabBar().setData({
-    //     selected: 2
-    //   })
-    // }
-  },
+  onReady() {},
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow() {
-    // if (typeof this.getTabBar === 'function' &&
-    //   this.getTabBar()) {
-    //   this.getTabBar().setData({
-    //     selected: 2
-    //   })
-    // }
-  },
+  onShow() {},
 
   /**
    * 生命周期函数--监听页面隐藏

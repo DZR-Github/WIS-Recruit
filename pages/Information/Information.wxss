@@ -1,1 +1,40 @@
 /* pages/Information/Information.wxss */
+
+.Box {
+  width: 80vw;
+  height: 680rpx;
+  background-color: rgba(187, 187, 198, 0.7);
+  display: inline-block;
+  margin-top: 50rpx;
+  border-radius: 20rpx;
+  position: relative;
+}
+
+.smallBox {
+  text-align: start;
+  width: 550rpx;
+  height: 80rpx;
+  background-color: rgba(61, 63, 90, 0.4);
+  margin-left: 20rpx;
+  margin-bottom: 40rpx;
+  border-radius: 20rpx;
+  padding-left: 20rpx;
+  line-height: 80rpx;
+  display: flex;
+}
+
+.icon {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.Input {
+  width: 400rpx;
+  height: 80rpx;
+  margin-left: 30rpx;
+  color: white;
+}
+
+.placeholder {
+  color: rgb(228, 228, 228);
+}

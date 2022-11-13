@@ -1,21 +1,33 @@
 <!-- 招新报名表页 -->
-<view style="width: 100vw;text-align: center;padding-top: 120rpx;background-color: #3e3f5c;">
+<view style="width: 100vw;text-align: center;padding-top: 120rpx;position: relative;">
   <image style="width: 200rpx;height: 75rpx;" src="../../img/entryForm.png"></image>
-  <view class="Box">
-    <!-- <view style="display: flex;flex-direction: row;width:100%;height:100%;padding: 20rpx;">
-      <view style="width: 100rpx;height: 100%;">
-        <image style="width: 70rpx;height: 70rpx;margin-bottom: 10rpx;" src="../../img/number.png"></image>
-        <image style="width: 70rpx;height: 70rpx;margin-bottom: 10rpx;" src="../../img/user.png"></image>
-        <image style="width: 70rpx;height: 70rpx;margin-bottom: 10rpx;" src="../../img/building.png"></image>
-        <image style="width: 70rpx;height: 70rpx;margin-bottom: 10rpx;" src="../../img/cube.png"></image>
-      </view>
-      <view style="display: flex;flex-direction: column;">
-        <input style="height: 70rpx;width: auto;color: white;text-align: start;margin-bottom: 10rpx;" placeholder="学号" placeholder-style="line-height: 70rpx;color:rgb(220, 220, 220);" type="text" name="studentNum" id="studentNum" />
-        <input style="height: 70rpx;width: auto;color: white;text-align: start;margin-bottom: 10rpx;" placeholder="姓名" placeholder-style="line-height: 70rpx;color:rgb(220, 220, 220);" type="text" name="studentNum" id="studentNum" />
-        <input style="height: 70rpx;width: auto;color: white;text-align: start;margin-bottom: 10rpx;" placeholder="学院" placeholder-style="line-height: 70rpx;color:rgb(220, 220, 220);margin-bottom: 10rpx;" type="text" name="studentNum" id="studentNum" />
-        <input style="height: 70rpx;width: auto;color: white;text-align: start;margin-bottom: 10rpx;" placeholder="方向" placeholder-style="line-height: 70rpx;color:rgb(220, 220, 220);" type="text" name="studentNum" id="studentNum" />
-      </view>
-    </view> -->
 
+  <view class="Box">
+    <!-- <view style="width: 80vw;height: 1000rpx;background-color: rgba(255,255,255,0.2);position: absolute;transform: rotate(-4deg);"></view> -->
+    <view class="smallBox" style="margin-top: 50rpx;">
+      <image class="icon" src="../../img/number.png"></image>
+      <input class="Input" type="text" placeholder="请输入学号" placeholder-class="placeholder" />
+    </view>
+    <view class="smallBox">
+      <image class="icon" src="../../img/user.png"></image>
+      <input class="Input" type="text" placeholder="请输入姓名" placeholder-class="placeholder" />
+    </view>
+    <view class="smallBox">
+      <image class="icon" src="../../img/building.png"></image>
+      <input class="Input" type="text" placeholder="请输入学院" placeholder-class="placeholder" />
+    </view>
+    <view class="smallBox">
+      <image class="icon" src="../../img/compass.png"></image>
+      <input class="Input" type="text" placeholder="选择你的方向" placeholder-class="placeholder" />
+    </view>
+    <view class="smallBox">
+      <image class="icon" src="../../img/phone.png"></image>
+      <input class="Input" type="text" placeholder="请输入你的手机号" placeholder-class="placeholder" />
+    </view>
+    <view class="smallBox" style="height: auto;border-radius: 30rpx;height: 300rpx;">
+      <image class="icon" src="../../img/introdution.png"></image>
+      <input maxlength="-1" class="Input" type="text" placeholder="介绍一下自己吧" placeholder-class="placeholder" />
+    </view>
   </view>
+  <button class="btn" hover-class="btn_hover">提交</button>
 </view>

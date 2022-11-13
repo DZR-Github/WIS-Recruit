@@ -3,14 +3,35 @@
 
 <view>
   <background></background>
-  <view style="width: 100vw;height: 100vh;text-align: center;">
-    <!-- <background></background> -->
+  <view style="width: 100vw;text-align: center;padding-top: 120rpx;position: relative;">
     <navigator url="/pages/index/index" open-type="navigateBack">
       <view style="height: 120rpx;width: 180rpx;top: 60rpx; left: -10rpx;position: fixed;z-index: 1;">
         <image style="height: 120rpx;width: 180rpx;top: 60rpx; left: -10rpx;position: fixed;" src="../../img/back.png">
         </image>
       </view>
     </navigator>
-    <image style="width: 250rpx;height: 75rpx;position: relative;top: 130rpx;" src="../../img/mineMsg.png"></image>
+    <image style="width: 250rpx;height: 75rpx;" src="../../img/mineMsg.png"></image>
+    <view class="Box">
+      <view class="smallBox" style="margin-top: 50rpx;">
+        <image class="icon" src="../../img/number.png"></image>
+        <input class="Input" disabled="true" type="text" placeholder="学号" placeholder-class="placeholder" />
+      </view>
+      <view class="smallBox">
+        <image class="icon" src="../../img/user.png"></image>
+        <input class="Input" disabled="true" type="text" placeholder="姓名" placeholder-class="placeholder" />
+      </view>
+      <view class="smallBox">
+        <image class="icon" src="../../img/building.png"></image>
+        <input class="Input" disabled="true" type="text" placeholder="学院" placeholder-class="placeholder" />
+      </view>
+      <view class="smallBox">
+        <image class="icon" src="../../img/compass.png"></image>
+        <input class="Input" disabled="true" type="text" placeholder="方向" placeholder-class="placeholder" />
+      </view>
+      <view class="smallBox">
+        <image class="icon" src="../../img/phone.png"></image>
+        <input class="Input" disabled="true" type="text" placeholder="手机号" placeholder-class="placeholder" />
+      </view>
+    </view>
   </view>
 </view>

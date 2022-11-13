@@ -1,29 +1,34 @@
-.container {
-  width: 100vw;
-  height: 100vh;
-  /* display: flex; */
+.bg {
+  background-color: #3c3e5b;
   position: relative;
-  z-index: -1;
+  z-index: -5;
 }
 
-@keyframes big_circle {
-  from {
-    transform: rotate(0);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.star {
+  width: 6rpx;
+  height: 6rpx;
+  border-radius: 6rpx;
+  position: absolute;
+  animation: myStar 5s ease infinite;
 }
 
-.bg_circle {
-  position: fixed;
-  z-index: -1;
-  width: 700rpx;
-  height: 700rpx;
-  left: -280rpx;
-  top: 600rpx;
-  animation-name: big_circle;
-  animation-duration: 60s;
-  animation-iteration-count: infinite;
+@keyframes myStar {
+  0% {
+    opacity: 0;
+  }
+
+  25% {}
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {}
+
+  90% {}
+
+  100% {
+    opacity: 0;
+  }
+
 }
