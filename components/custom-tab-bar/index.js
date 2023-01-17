@@ -1,11 +1,6 @@
 let app = getApp()
 Component({
-  properties: {
-    Selected: {
-      type: Number,
-      value: 0
-    }
-  },
+  properties: {},
   data: {
     selected: app.globalData.selected,
     list: [{
@@ -46,6 +41,7 @@ Component({
         selected: data.index
       })
       app.globalData.selected = data.index
+      // app.globalData.Animate_g = " "
     }
   }
 

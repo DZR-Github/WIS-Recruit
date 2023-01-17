@@ -1,15 +1,46 @@
 // pages/Feedback/Feedback.js
+
+const app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    feedback: ""
   },
   setSelected() {
-    let app = getApp()
-    app.globalData.selected = 2
+    //let app = getApp()
+    //app.globalData.selected = 2
+  },
+  setFeedback(e) {
+    //console.log(e.detail.value)
+    this.setData({
+      feedback: e.detail.value
+    })
+  },
+  commit() {
+    const that = this
+    wx.request({ //发送请求提交用户反馈
+      url: 'http://127.0.0.1:4523/m1/1875832-0-default/user/addFeedback/1',
+      data: {
+        "userId": app.globalData.userId,
+        "token": app.globalData.token,
+        "content": that.data.feedback
+      },
+      method: 'GET',
+      success: (result) => {
+        //console.log("Get openID success!")
+        console.log(result)
+
+      },
+      fail: (res) => {
+        console.log("fail")
+        console.log(res)
+      },
+      complete: (res) => {},
+    })
   },
 
   /**

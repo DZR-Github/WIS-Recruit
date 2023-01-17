@@ -1,3 +1,9 @@
+.banner {
+  width: 100vw;
+  height: 1300rpx;
+  text-align: center;
+}
+
 .banner .wx-swiper-dot {
   width: 20rpx;
   height: 5rpx;

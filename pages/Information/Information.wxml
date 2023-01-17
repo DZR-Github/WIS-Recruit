@@ -14,23 +14,23 @@
     <view class="Box">
       <view class="smallBox" style="margin-top: 50rpx;">
         <image class="icon" src="../../img/number.png"></image>
-        <input class="Input" disabled="true" type="text" placeholder="学号" placeholder-class="placeholder" />
+        <input class="Input" value="{{stuNumber}}" disabled="true" type="text" placeholder="学号" placeholder-class="placeholder" />
       </view>
       <view class="smallBox">
         <image class="icon" src="../../img/user.png"></image>
-        <input class="Input" disabled="true" type="text" placeholder="姓名" placeholder-class="placeholder" />
+        <input class="Input" value="{{username}}" disabled="true" type="text" placeholder="姓名" placeholder-class="placeholder" />
       </view>
       <view class="smallBox">
         <image class="icon" src="../../img/building.png"></image>
-        <input class="Input" disabled="true" type="text" placeholder="学院" placeholder-class="placeholder" />
+        <input class="Input" value="{{academy}}" disabled="true" type="text" placeholder="学院" placeholder-class="placeholder" />
       </view>
       <view class="smallBox">
         <image class="icon" src="../../img/compass.png"></image>
-        <input class="Input" disabled="true" type="text" placeholder="方向" placeholder-class="placeholder" />
+        <input class="Input" value="{{direction}}" disabled="true" type="text" placeholder="方向" placeholder-class="placeholder" />
       </view>
       <view class="smallBox">
         <image class="icon" src="../../img/phone.png"></image>
-        <input class="Input" disabled="true" type="text" placeholder="手机号" placeholder-class="placeholder" />
+        <input class="Input" value="{{phoneNum}}" disabled="true" type="text" placeholder="手机号" placeholder-class="placeholder" />
       </view>
     </view>
   </view>

@@ -13,17 +13,8 @@ Page({
     canIUseGetUserProfile: false,
     canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
   },
-  // observers: {
-  //   'app.globalData.selected': (app) => {
-  //     this.setData({
-  //       selected: app.globalData.selected
-  //     })
-  //   }
-  // },
 
-  change(e) {
-    // console.log(e)
-    const app = getApp()
+  change(e) {      //点击tabbar图标改变selected的值
     this.setData({
       selected: app.globalData.selected
     })

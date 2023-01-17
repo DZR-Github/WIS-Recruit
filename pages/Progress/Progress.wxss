@@ -21,7 +21,6 @@
 .dots {
   position: absolute;
   left: 400rpx;
-
   width: 20rpx;
   height: 20rpx;
   border-radius: 20rpx;

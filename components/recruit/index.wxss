@@ -35,6 +35,27 @@
 
 .placeholder {
   color: rgb(228, 228, 228);
+  text-align: start;
+
+  /* line-height: 80rpx; */
+}
+
+.introPlace {
+  color: rgb(228, 228, 228);
+  text-align: start;
+  position: relative;
+  z-index: 0;
+}
+
+.intro {
+  width: 400rpx;
+  height: 300rpx;
+  line-height: 1.2em;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  color: white;
+  position: relative;
+  z-index: 0;
 }
 
 .btn {
@@ -42,4 +63,104 @@
   margin-top: 50rpx;
   border-radius: 20rpx;
   background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+}
+
+.choice {
+  border-bottom: 0.5px solid gray;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: large;
+}
+
+.bgHidden {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  z-index: 4;
+  display: none;
+}
+
+.choiceBox {
+  bottom: -400rpx;
+  background-color: aliceblue;
+  width: 100vw;
+  height: 380rpx;
+  position: absolute;
+  border-top-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+  z-index: 5;
+  /* animation: appear 1s ease 1 forwards; */
+}
+
+.choice_academy_box {
+  bottom: -670rpx;
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  height: 670rpx;
+  position: absolute;
+  z-index: 5;
+}
+
+
+.choice_academy {
+  width: 100vw;
+  height: 580rpx;
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.choiceBox_2 {
+  background-color: skyblue;
+  height: 80rpx;
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+}
+
+@keyframes appear {
+  0% {
+    bottom: -400rpx;
+  }
+
+  100% {
+    bottom: 0rpx;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    bottom: 0rpx;
+  }
+
+  100% {
+    bottom: -400rpx;
+  }
+}
+
+@keyframes appear_Academy {
+  0% {
+    bottom: -670rpx;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes disappear_Academy {
+  0% {
+    bottom: 0;
+  }
+
+  100% {
+    bottom: -670rpx;
+  }
 }

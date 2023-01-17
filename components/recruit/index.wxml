@@ -1,33 +1,59 @@
 <!-- 招新报名表页 -->
-<view style="width: 100vw;text-align: center;padding-top: 120rpx;position: relative;">
-  <image style="width: 200rpx;height: 75rpx;" src="../../img/entryForm.png"></image>
+<view style="width: 100vw;height: 100vh;text-align: center;position: relative;">
+  <image style="width: 200rpx;height: 75rpx;margin-top: 120rpx;" src="../../img/entryForm.png"></image>
 
-  <view class="Box">
-    <!-- <view style="width: 80vw;height: 1000rpx;background-color: rgba(255,255,255,0.2);position: absolute;transform: rotate(-4deg);"></view> -->
-    <view class="smallBox" style="margin-top: 50rpx;">
-      <image class="icon" src="../../img/number.png"></image>
-      <input class="Input" type="text" placeholder="请输入学号" placeholder-class="placeholder" />
+  <form catchsubmit="commit">
+    <view class="Box">
+      <view class="smallBox" style="margin-top: 50rpx;">
+        <image class="icon" src="../../img/number.png"></image>
+        <input class="Input" name="stuNumber" type="text" placeholder="请输入学号" placeholder-class="placeholder" />
+      </view>
+      <view class="smallBox">
+        <image class="icon" src="../../img/user.png"></image>
+        <input class="Input" name="username" type="text" placeholder="请输入姓名" placeholder-class="placeholder" />
+      </view>
+      <view class="smallBox">
+        <image class="icon" src="../../img/building.png"></image>
+        <input class="Input" name="academy" value="{{Academy}}" type="text" placeholder="请输入学院" bindtap="setChoice_2" placeholder-class="placeholder" disabled="true" />
+      </view>
+      <view class="smallBox">
+        <image class="icon" src="../../img/compass.png"></image>
+        <view style="position: relative;"><input class="Input" disabled="true" value="{{Direction}}" bindtap="setChoice" name="direction" id="direction" type="text" placeholder="选择你的方向" placeholder-class="placeholder" />
+        </view>
+      </view>
+      <view class="smallBox">
+        <image class="icon" src="../../img/phone.png"></image>
+        <input class="Input" name="phoneNum" type="text" placeholder="请输入你的手机号" placeholder-class="placeholder" />
+      </view>
+      <view class="smallBox" style="height: auto;border-radius: 30rpx;height: 300rpx;">
+        <image class="icon" src="../../img/introdution.png"></image>
+        <textarea maxlength="-1" name="introduction" placeholder="介绍一下自己吧" placeholder-class="introPlace" class="intro"></textarea>
+      </view>
     </view>
-    <view class="smallBox">
-      <image class="icon" src="../../img/user.png"></image>
-      <input class="Input" type="text" placeholder="请输入姓名" placeholder-class="placeholder" />
-    </view>
-    <view class="smallBox">
-      <image class="icon" src="../../img/building.png"></image>
-      <input class="Input" type="text" placeholder="请输入学院" placeholder-class="placeholder" />
-    </view>
-    <view class="smallBox">
-      <image class="icon" src="../../img/compass.png"></image>
-      <input class="Input" type="text" placeholder="选择你的方向" placeholder-class="placeholder" />
-    </view>
-    <view class="smallBox">
-      <image class="icon" src="../../img/phone.png"></image>
-      <input class="Input" type="text" placeholder="请输入你的手机号" placeholder-class="placeholder" />
-    </view>
-    <view class="smallBox" style="height: auto;border-radius: 30rpx;height: 300rpx;">
-      <image class="icon" src="../../img/introdution.png"></image>
-      <input maxlength="-1" class="Input" type="text" placeholder="介绍一下自己吧" placeholder-class="placeholder" />
+    <button class="btn" hover-class="btn_hover" form-type="submit">提交</button>
+  </form>
+  <view class="bgHidden" style="display: {{choice===0?NONE:BLOCK}};"></view>
+  <view class="choiceBox" style="animation: {{Animate}};">
+    <input class="choice" id="0" bindtap="choose" style="margin-top: 0;border-top-left-radius: 50rpx;border-top-right-radius: 50rpx;" value="前端" disabled="true"></input>
+    <input class="choice" id="1" bindtap="choose" value="后台" disabled="true"></input>
+    <input class="choice" id="2" bindtap="choose" value="安卓" disabled="true"></input>
+    <view class="choice" style="height: 160rpx;" id="3" bindtap="choose">UI</view>
+  </view>
+  <view class="choice_academy_box" style="animation: {{Animate_Academy}};">
+    选择你的学院
+    <view class="choice_academy">
+      <view class="choiceBox_2" id="0" bindtap="choose_academy">计算机</view>
+      <view class="choiceBox_2" id="1" bindtap="choose_academy">信息工程</view>
+      <view class="choiceBox_2" id="2" bindtap="choose_academy">机电工程</view>
+      <view class="choiceBox_2" id="3" bindtap="choose_academy">自动化</view>
+      <view class="choiceBox_2" id="4" bindtap="choose_academy">生物医药</view>
+      <view class="choiceBox_2" id="5" bindtap="choose_academy">轻工化工</view>
+      <view class="choiceBox_2" id="6" bindtap="choose_academy">土木与交通工程</view>
+      <view class="choiceBox_2" id="7" bindtap="choose_academy">环境科学与工程</view>
+      <view class="choiceBox_2" id="8" bindtap="choose_academy">外国语</view>
+      <view class="choiceBox_2" id="9" bindtap="choose_academy">材料与能源</view>
+      <view class="choiceBox_2" id="10" bindtap="choose_academy">物理与光电工程</view>
+      <view class="choiceBox_2" id="11" bindtap="choose_academy">集成电路</view>
     </view>
   </view>
-  <button class="btn" hover-class="btn_hover">提交</button>
 </view>

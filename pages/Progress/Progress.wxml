@@ -20,11 +20,11 @@
     <view style="top: 310rpx;" class="text3">面试考核</view>
     <view style="top: 510rpx;" class="text3">一轮项目考核</view>
     <view style="top: 710rpx;" class="text3">二轮项目考核</view>
-    <view style="top: 125rpx;background-color: {{write===0?red:green}};" class="dots"></view>
-    <view style="top: 328rpx;background-color: {{interview===0?red:green}};" class="dots"></view>
-    <view style="top: 529rpx;background-color: {{firstItem===0?red:green}};" class="dots"></view>
-    <view style="top: 730rpx;background-color: {{secondItem===0?red:green}};" class="dots"></view>
-    <view class="text2">您的总考核结果：通过！</view>
+    <view style="display:{{write===2?NONE:BLOCK}};top: 125rpx;background-color: {{write===0?red:green}};" class="dots"></view>
+    <view style="display:{{interview===2?NONE:BLOCK}};top: 328rpx;background-color: {{interview===0?red:green}};" class="dots"></view>
+    <view style="display:{{firstItem===2?NONE:BLOCK}};top: 529rpx;background-color: {{firstItem===0?red:green}};" class="dots"></view>
+    <view style="display:{{secondItem===2?NONE:BLOCK}};top: 730rpx;background-color: {{secondItem===0?red:green}};" class="dots"></view>
+    <view class="text2">您的总考核结果：{{finalResult}}</view>
     <view class="dots" style="top: 1000rpx;left: 150rpx;background-color: #84f59b;"></view>
     <view class="text4" style="left: 180rpx;">已通过</view>
     <view class="dots" style="top: 1000rpx;left: 320rpx;background-color: red;"></view>

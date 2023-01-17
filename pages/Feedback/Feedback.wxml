@@ -8,10 +8,12 @@
       </image>
     </view>
   </navigator>
-  <view class="feedbackBox">
-    <!-- <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea> -->
-    <textarea style="width: 490rpx;" placeholder="请在此处输入您的反馈" maxlength="-1" auto-height />
-  </view>
-  <button class="btn">提交</button>
+  <form catchsubmit="commit">
+    <view class="feedbackBox">
+      <!-- <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea> -->
+      <textarea bindblur="setFeedback" style="width: 490rpx;" value="{{feedback}}" placeholder="请在此处输入您的反馈" maxlength="-1" auto-height />
+    </view>
+    <button class="btn" form-type="submit">提交</button>
+  </form>
 
 </view>
