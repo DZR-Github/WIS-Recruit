@@ -37,11 +37,12 @@
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "condition": false
   },
   "compileType": "miniprogram",
   "libVersion": "2.19.4",
-  "appid": "wx2eca52e5d8a5a08d",
+  "appid": "wxde7d3744859c2388",
   "projectname": "miniprogram-92",
   "condition": {},
   "editorSetting": {
