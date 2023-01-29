@@ -44,4 +44,14 @@
     </view>
     <view style="width: 100vw;height: 2rpx;background-color: rgb(224, 223, 223);position: fixed;bottom: 500rpx;"></view>
   </navigator>
+  <!-- 预约面试 -->
+
+  <navigator url="{{urls[3]}}" open-type="navigate">
+    <view style="width: 100vw;height: 100rpx;position: fixed;bottom: 400rpx;">
+      <image style="width: 80rpx; height: 80rpx;position: absolute;left: 35rpx;top:15rpx;" src="../../img/reservation.png"></image>
+      <image style="width: 100rpx; height: 100rpx;position: absolute;right: 0rpx;" src="../../img/arrow_right.png"></image>
+      <view style="margin-left:140rpx;height: 100rpx;line-height: 100rpx; font-size: large;color: gray;">预约面试</view>
+    </view>
+    <view style="width: 100vw;height: 2rpx;background-color: rgb(224, 223, 223);position: fixed;bottom: 400rpx;"></view>
+  </navigator>
 </view>

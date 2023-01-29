@@ -7,7 +7,8 @@ Page({
     urls: [
       "/pages/Information/Information",
       "/pages/Progress/Progress",
-      "/pages/Feedback/Feedback"
+      "/pages/Feedback/Feedback",
+      "/pages/Reservation/Reservation"
     ]
   },
 

@@ -1,0 +1,85 @@
+<!--pages/Reservation/Reservation.wxml-->
+<!-- 预约面试界面 -->
+<view>
+  <background></background>
+  <navigator url="/pages/index/index" open-type="navigateBack">
+      <view style="height: 120rpx;width: 180rpx;top: 60rpx; left: -10rpx;position: fixed;z-index: 1;">
+        <image style="height: 120rpx;width: 180rpx;top: 60rpx; left: -10rpx;position: fixed;" src="../../img/back.png">
+        </image>
+      </view>
+    </navigator>
+    <view class="text">预约面试</view>
+    <view style="width: 100%; height: 100%; margin-top: 35rpx;  ">
+      <!-- 选择方向 -->
+      <view style="display: flex; justify-content: start;align-items: center;height: 100rpx; column-gap: 20rpx;">
+        <view style="width: 30%;color:#fff;padding-left: 30rpx;font-weight: 900;">请选择方向:</view>
+         <!-- 单选器 -->
+      <radio-group bindchange="direction" style="width: 70%;font-size: small;font-weight:bold;color: #fff;display: flex;justify-content: start;align-items: center;column-gap: 20rpx;">
+        <radio checked="true" value="前端"/>
+        前端
+        <radio value="后端"/>
+        后端
+        <radio value="安卓"/>
+        安卓
+      </radio-group>
+      </view>
+      
+      <!-- 选择面试时间 -->
+      <view style="width: 100%;height:100rpx;color:#fff;padding-left: 30rpx;font-weight: 900;display: flex;align-items: center;">
+        <view>请选择面试时间 :
+        </view>
+        <button size="mini" bindtap="timeOpen" style="font-size: 16px;">点击选择</button>
+      </view>
+      
+      
+    </view>
+    <!-- 展示预约信息以及排队情况 -->
+    <view style="width:100%;height:900rpx;margin-top: 100rpx;display: flex;justify-content: center;align-items: center;">
+        <view style="width: 95%;height: 95%;  background-color: rgba(187, 187, 198, 0.3);border-radius: 3%;">
+          <view style="color: rgb(243, 159, 2);font-weight: bold;font-size:40rpx;margin-left: 30rpx;margin-top: 50rpx;">
+            预约通知 !
+          </view>
+          <view class="reservation-informatin">
+            <view style="width: 100%;">
+              方向 :
+            </view>
+            <view style="width: 100%;margin-top: 30rpx;color: rgb(243, 159, 2);">
+              {{directionData}}
+            </view>
+          </view>
+          <view class="reservation-informatin">
+            <view style="width: 100%;">
+              预约时间 :
+            </view>
+            <view style="width: 100%;margin-top: 30rpx;color: rgb(243, 159, 2);">
+              {{selectDate}}
+            </view>
+          </view>
+          <view class="reservation-informatin">
+            <view style="width: 100%;">
+              当前排队状态 ：
+            </view>
+            <view style="width: 100%;margin-top: 30rpx;color: rgb(243, 159, 2);">
+              {{lineData}}
+            </view>
+          </view>
+          <view style="width: 100%;height: 15%;display: flex;justify-content: center;align-items: center;margin-top: 20rpx;">
+          <button size="default" bindtap="CommitReservation" style="font-weight: bold;">提交预约</button>
+          <button size="default"bindtap="CancelReservation" style="font-weight: bold;" >取消预约</button>
+          </view>
+        </view>
+      </view>
+</view> 
+
+<!-- 组件的选择器 -->
+
+<!-- 显示选择时间的组件 -->
+<view style="position: fixed;top: 0;">
+  <date-picker id="picker" range="2" step="20" start_time="10" end_time="12" bindconfirm="confirm">
+</date-picker>
+</view>
+
+ 
+     
+
+

@@ -12,18 +12,43 @@
   <!-- 轮播图 -->
   <swiper class="banner" current="{{currentIndex}}" bindchange="swiperChange" indicator-dots>
     <swiper-item>
-      <view style="margin-top: 150rpx;">
+      <view style="position:relative;margin-top: 150rpx;">
         <image style="width: 600rpx;height: 1100rpx;" src="../../img/mid1.png"></image>
+        <view class="text" style="height:500rpx;width: 550rpx;position: absolute;">
+          WISStudio，是以网络身份安全粤港联合实验室WISLab为基础筹建的本科生研发创新团队。WISStudio主要以技术研发为主，与现有研究生团队结合，以具体产品为实践，打造产学研一体化团队。不管是热爱技术编程的同学，还是喜欢学术研究，准备保研考研的同学，亦或是喜欢产品设计的同学，我们都诚邀你的加入。
+        </view>
       </view>
     </swiper-item>
     <swiper-item>
-      <view>
+      <view style="position: relative;">
         <image style="width: 640rpx;height: 1250rpx;" src="../../img/web.png"></image>
+        <view class="introduce">
+          <view class="version">
+          前端开发是创建WEB页面或小程序等前端界面呈现给用户的过程，实现互联网产品的用户界面交互，用界面将用户与计算机连接起来。
+        </view>
+        <view class="version">
+          WISStudio前端组基于HTML，CSS及JavaScript为基础知识，在衍生框架与各种技术的实践下，将产品的UI设计稿在用户的终端上实现。前端方向也不仅局限于WEB页面与小程序，还可以深入数据可视化、Serverless技术、ReactNative与flutter跨平台技术等。
+        </view>
+        <view class="version">
+         前端组欢迎你们的加入！
+        </view>
+        </view>
       </view>
     </swiper-item>
     <swiper-item>
-      <view>
+      <view style="position: relative;">
         <image style="width: 640rpx;height: 1250rpx;" src="../../img/backstage.png"></image>
+        <view class="introduce">
+          <view class="version">
+            后台是与数据和信息打交道的方向, 通过对业务的梳理和数据的交互, 为数据为前端, 移动端提供着强有力的支持, 间接通过前台体现后台价值。
+          </view>
+          <view class="version">
+            WISStudio后台组基于Java语言, 一直致力于企业级项目的实现和优化, 为工作室的多数项目提供优质的功能服务, 同时在项目中得到锻炼和成长。
+          </view>
+          <view class="version">
+            如果你对后台感兴趣并且想要得到锻炼，那么赶快报名吧！
+          </view>
+        </view>
       </view>
     </swiper-item>
     <swiper-item>

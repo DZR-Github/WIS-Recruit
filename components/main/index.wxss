@@ -89,3 +89,55 @@
     right: -20rpx;
   }
 }
+
+/* 轮播图里面的文字部分 */
+.text{
+  color: #ffffff;
+  top: 37%; 
+  left: 50%;
+  margin-left: -275rpx; 
+  text-indent: 2em;
+  text-align: left;
+  font-family:'fangsong';
+  font-size: 35rpx;
+  font-weight: bold;
+  letter-spacing: 0;
+  /* background-color: aquamarine; */
+}
+/* .introduce{
+  position: absolute;
+  width: 580rpx;
+  height: 400rpx;
+  color: #ffffff;
+  top: 45%;
+  left: 50%;
+  margin-left: -290rpx;
+  text-indent: 2em;
+  text-align: left;
+  font-family:'fangsong';
+  font-size: 35rpx;
+  font-weight: 700;
+  letter-spacing: 0;
+  background-color: royalblue;
+} */
+.introduce{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content:start;
+  row-gap: 30rpx;
+  width: 580rpx;
+  height: 600rpx;
+  color: #ffffff;
+  top: 45%;
+  left: 50%;
+  margin-left: -290rpx;
+}
+.version{
+  text-indent: 2em;
+  text-align: left;
+  font-family:'fangsong';
+  font-size: 35rpx;
+  font-weight: bold;
+  letter-spacing: 0;
+}
