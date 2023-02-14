@@ -8,14 +8,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    feedback: ""
+    feedback: "",
   },
   setSelected() {
     //let app = getApp()
     //app.globalData.selected = 2
   },
   setFeedback(e) {
-    //console.log(e.detail.value)
+    // console.log(e.detail.value)
     this.setData({
       feedback: e.detail.value
     })
@@ -61,7 +61,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-
+    
   },
 
   /**
