@@ -6,10 +6,13 @@ Page({
    */
   data: {
      selectDate:"暂无",
-     directionData:"暂无",
+     directionData:"前端",
      lineData:"暂无预约 !",
      timeData:"",
      flag:false,
+     commitDisabled:true,
+     cancelDisabled:true,
+     chooseDisabled:false,
   },
 
   timeOpen(){
@@ -19,6 +22,11 @@ Page({
     this.setData({
        selectDate:e.detail.selectDate
     })
+    if(this.data.selectDate!="暂无"){
+      this.setData({
+        commitDisabled:false
+      })
+    }
   },
   direction(e){
     this.setData({
@@ -26,9 +34,13 @@ Page({
    })
   },
   CommitReservation(){
+    // 禁用选择时间的按钮
+    this.setData({
+      chooseDisabled:true
+    })
     let TimeDate=this.data.selectDate;
     wx.request({ //发送请求提交面试预约信息
-      url: 'http://127.0.0.1:4523/m1/1875832-0-default/user/interview/1',
+      url: 'http://43.139.33.166/api/user/interview/1',
       data: {
         "userId": app.globalData.userId,
         "token": app.globalData.token,
@@ -37,6 +49,12 @@ Page({
       method: 'POST',
       success: (result) => {
         console.log(result)
+        this.setData({
+          cancelDisabled:!this.data.cancelDisabled
+        })
+        this.setData({
+          commitDisabled:!this.data.commitDisabled
+        })
       },
       fail: (res) => {
         console.log("fail")
@@ -45,7 +63,7 @@ Page({
       complete: (res) => {},
     })
     wx.request({ //发送请求获取当前排队进度
-      url: 'http://127.0.0.1:4523/m1/1875832-0-default/user/line/1',
+      url: 'http://43.139.33.166/api/user/line/1',
       data: {
         "userId": app.globalData.userId,
         "token": app.globalData.token,
@@ -65,8 +83,33 @@ Page({
     })
   },
   CancelReservation(){
-    this.setData({
-      lineData:"暂无预约 !"
+    wx.request({ //发送请求取消面试预约信息
+      url: 'http://43.139.33.166/api/user/interview/1',
+      data: {
+        "userId": app.globalData.userId,
+        "token": app.globalData.token,
+      },
+      method: 'DELETE',
+      success: (result) => {
+        console.log(result)
+        this.setData({
+          lineData:"暂无预约 !"
+        })
+        this.setData({
+          cancelDisabled:!this.data.cancelDisabled
+        })
+        this.setData({
+          commitDisabled:!this.data.commitDisabled
+        })
+        this.setData({
+          chooseDisabled:false
+        })
+      },
+      fail: (res) => {
+        console.log("fail")
+        console.log(res)
+      },
+      complete: (res) => {},
     })
   },
 
