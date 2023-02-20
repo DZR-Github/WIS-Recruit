@@ -36,9 +36,9 @@ Page({
     const that = this
     if (app.globalData.information_status === 0) { //information_status等于0时代表未发送过请求，需要发送请求获取数据；否则直接从全局变量中取值
       wx.request({ //发送请求获取个人信息
-        url: 'http://127.0.0.1:4523/m1/1875832-0-default/user/info/1',
-        data: {
-          "userId": app.globalData.userId,
+        url: 'http://43.139.33.166/api/user/info/' + app.globalData.userId,
+
+        header: {
           "token": app.globalData.token
         },
         method: 'GET',
@@ -46,7 +46,7 @@ Page({
           //console.log("Get openID success!")
           console.log(result)
 
-          app.globalData.information.username = result.data.data.username
+          app.globalData.information.userName = result.data.data.userName
           app.globalData.information.stuNumber = result.data.data.stuNumber
           app.globalData.information.academy = result.data.data.academy
           app.globalData.information.direction = result.data.data.direction
@@ -55,7 +55,7 @@ Page({
           app.globalData.information_status = 1
 
           that.setData({
-            username: result.data.data.username,
+            username: result.data.data.userName,
             stuNumber: result.data.data.stuNumber,
             academy: result.data.data.academy,
             direction: result.data.data.direction,
@@ -70,7 +70,7 @@ Page({
       })
     } else {
       that.setData({
-        username: app.globalData.information.username,
+        username: app.globalData.information.userName,
         stuNumber: app.globalData.information.stuNumber,
         academy: app.globalData.information.academy,
         direction: app.globalData.information.direction,

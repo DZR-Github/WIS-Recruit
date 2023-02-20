@@ -23,11 +23,12 @@ Page({
   commit() {
     const that = this
     wx.request({ //发送请求提交用户反馈
-      url: 'http://127.0.0.1:4523/m1/1875832-0-default/user/addFeedback/1',
+      url: 'http://43.139.33.166/api/user/addFeedback/' + app.globalData.userId,
       data: {
-        "userId": app.globalData.userId,
-        "token": app.globalData.token,
         "content": that.data.feedback
+      },
+      header: {
+        "token": app.globalData.token
       },
       method: 'GET',
       success: (result) => {
@@ -61,7 +62,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
-    
+
   },
 
   /**

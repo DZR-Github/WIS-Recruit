@@ -34,16 +34,17 @@ Component({
       //console.log(app.globalData.userId + "&&token=" + app.globalData.token)
 
       wx.request({ //点击提交后发送请求，报名
-        url: 'http://127.0.0.1:4523/m1/1875832-0-default/user/info/1',
+        url: 'http://43.139.33.166/api/user/info/' + app.globalData.userId,
         data: {
-          "userId": app.globalData.userId,
-          "token": app.globalData.token,
-          "username": Data.username,
+          "userName": Data.username,
           "stuNumber": Data.stuNumber,
           "academy": Data.academy,
           "direction": Data.direction,
           "phoneNum": Data.phoneNum,
           "introduction": Data.introduction
+        },
+        header: {
+          "token": app.globalData.token
         },
         method: 'PUT',
         success: (result) => {

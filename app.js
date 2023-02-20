@@ -9,18 +9,16 @@ App({
     // 登录
     wx.login({
       success: res => {
-        //console.log(res.code)
+        console.log(res.code)
         //发送 res.code 到后台换取 userId,token
         wx.request({
-          url: 'http://127.0.0.1:4523/m1/1875832-0-default/user/info',
-          data: {
-            "code": res.code
-          },
+          url: 'http://43.139.33.166/api/user/info',
+          data: res.code,
           method: 'POST',
           success: (result) => { //成功以后将userId跟token存到全局变量
             //console.log("Get openID success!")
-            //console.log(result)
-            that.globalData.userId = result.data.data.userId
+            console.log(result)
+            that.globalData.userId = result.data.data.id
             that.globalData.token = result.data.data.token
 
           },
@@ -49,7 +47,7 @@ App({
     information_status: 0, //获取个人资料的状态，0代表未发送请求；1代表已发送请求，直接从全局变量中取information对象中的值来用
     information: { //个人资料页的值，从后台请求回来放到全局变量
       stuNumber: "",
-      username: "",
+      userName: "",
       academy: "",
       direction: "",
       phoneNum: ""

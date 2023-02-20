@@ -1,5 +1,5 @@
 // pages/Home.js
-Page({     //此行的Page不能更改为Component!!!
+Page({ //此行的Page不能更改为Component!!!
   /**
    * 页面的初始数据
    */

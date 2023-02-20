@@ -84,10 +84,10 @@ Page({
   },
   CancelReservation(){
     wx.request({ //发送请求取消面试预约信息
-      url: 'http://43.139.33.166/api/user/interview/1',
-      data: {
-        "userId": app.globalData.userId,
-        "token": app.globalData.token,
+      url: 'http://43.139.33.166/api/user/interview/'+app.globalData.userId,
+     
+      header:{
+        "token": app.globalData.token
       },
       method: 'DELETE',
       success: (result) => {
