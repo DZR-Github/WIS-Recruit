@@ -3,11 +3,11 @@
     "pages/Home/Home",
     "pages/index/index",
 
-
     "pages/Feedback/Feedback",
     "pages/Information/Information",
     "pages/Progress/Progress",
     "pages/Reservation/Reservation"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

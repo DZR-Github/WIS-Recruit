@@ -1,1 +1,15 @@
 /* pages/Mine.wxss */
+
+.avatar {
+  display: block;
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 180rpx;
+}
+
+.avatar-wrapper {
+  padding: 0;
+  width: 180rpx;
+  margin-bottom: 40px;
+  border-radius: 180rpx;
+}

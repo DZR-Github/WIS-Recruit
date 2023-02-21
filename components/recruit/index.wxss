@@ -14,7 +14,7 @@
   height: 80rpx;
   background-color: rgba(61, 63, 90, 0.4);
   margin-left: 20rpx;
-  
+
   border-radius: 80rpx;
   padding-left: 20rpx;
   line-height: 80rpx;
@@ -63,6 +63,8 @@
   margin-top: 50rpx;
   border-radius: 20rpx;
   background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+  color: white;
+
 }
 
 .choice {
@@ -116,7 +118,9 @@
 }
 
 .choiceBox_2 {
-  background-color: skyblue;
+  /* background-color: skyblue; */
+  /* background-color: rgba(187, 187, 198, 0.7); */
+  background-color: rgba(61, 63, 90, 0.4);
   height: 80rpx;
   width: 40vw;
   margin-left: auto;
