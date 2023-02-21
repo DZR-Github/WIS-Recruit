@@ -5,10 +5,12 @@
   <background></background>
   <stars></stars>
   <view style="width: 100vw;text-align: center;">
-    <image style="width: 600rpx;height: 360rpx;margin-top: 12vh;" src="../../img/WIS.png"></image>
+    <!-- <image style="width: 600rpx;height: 360rpx;margin-top: 12vh;" src="../../img/WIS.png"></image> -->
+    <image style="width: 600rpx;height: 360rpx;margin-top: 12vh;" src="http://dzrblog.asia/WIS.png"></image>
+
   </view>
   <view style="width: 100vw;text-align: center;">
-    <image style="width: 500rpx;height: 260rpx;margin-top: 12vh;" src="../../img/Home.png"></image>
+    <image style="width: 500rpx;height: 260rpx;margin-top: 12vh;" src="http://dzrblog.asia/Home.png"></image>
   </view>
   <view>
     <navigator url="{{url}}" open-type="redirect"><button class="Btn">了解我们</button></navigator>

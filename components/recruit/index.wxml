@@ -6,25 +6,27 @@
     <view class="Box">
       <view class="smallBox" style="margin-top: 50rpx;">
         <image class="icon" src="../../img/number.png"></image>
-        <input class="Input" name="stuNumber" type="text" placeholder="请输入学号" placeholder-class="placeholder" />
+        <input class="Input" name="stuNumber" bindblur="stuNumInput" type="number" maxlength="10" placeholder="请输入学号" placeholder-class="placeholder" />
       </view>
-      <view class="smallBox">
+      <view style="height: 50rpx;color: red;">{{stuNumDes}}</view>
+      <view class="smallBox" style="margin-bottom: 40rpx;">
         <image class="icon" src="../../img/user.png"></image>
         <input class="Input" name="username" type="text" placeholder="请输入姓名" placeholder-class="placeholder" />
       </view>
-      <view class="smallBox">
+      <view class="smallBox" style="margin-bottom: 40rpx;">
         <image class="icon" src="../../img/building.png"></image>
         <input class="Input" name="academy" value="{{Academy}}" type="text" placeholder="请输入学院" bindtap="setChoice_2" placeholder-class="placeholder" disabled="true" />
       </view>
-      <view class="smallBox">
+      <view class="smallBox" style="margin-bottom: 40rpx;">
         <image class="icon" src="../../img/compass.png"></image>
         <view style="position: relative;"><input class="Input" disabled="true" value="{{Direction}}" bindtap="setChoice" name="direction" id="direction" type="text" placeholder="选择你的方向" placeholder-class="placeholder" />
         </view>
       </view>
       <view class="smallBox">
         <image class="icon" src="../../img/phone.png"></image>
-        <input class="Input" name="phoneNum" type="text" placeholder="请输入你的手机号" placeholder-class="placeholder" />
+        <input class="Input" name="phoneNum" maxlength="11" bindblur="mobileInput" type="number" placeholder="请输入你的手机号" placeholder-class="placeholder" />
       </view>
+      <view style="height: 50rpx;color: red;">{{phoneDes}}</view>
       <view class="smallBox" style="height: auto;border-radius: 30rpx;height: 300rpx;">
         <image class="icon" src="../../img/introdution.png"></image>
         <textarea maxlength="-1" name="introduction" placeholder="介绍一下自己吧" placeholder-class="introPlace" class="intro"></textarea>

@@ -11,7 +11,9 @@ Component({
     NONE: "none",
     BLOCK: "block",
     Animate: " ", //点击'方向'的动画
-    Animate_Academy: " " //点击'学院'的动画
+    Animate_Academy: " ", //点击'学院'的动画
+    phoneDes: "",
+    stuNumDes: ""
   },
   lifetimes: {
     attached() {
@@ -85,6 +87,34 @@ Component({
           Animate_Academy: " "
         })
       }, 500)
+    },
+    stuNumInput(e) {
+      const stuNumReg = /^\d{10}$/
+      const stuNum = e.detail.value
+
+      if (!stuNumReg.test(stuNum)) {
+        this.setData({
+          stuNumDes: "学号输入有误！"
+        })
+      } else {
+        this.setData({
+          stuNumDes: ""
+        })
+      }
+    },
+    mobileInput(e) {
+      const numberReg = /^\d{11}$/
+      const mobile = e.detail.value
+      if (!numberReg.test(mobile)) {
+        this.setData({
+          phoneDes: "手机号输入有误！"
+        })
+      } else {
+        this.setData({
+          phoneDes: ""
+        })
+      }
+      //console.log(e.detail.value)
     },
     choose(e) {
       // console.log(e.currentTarget.id)

@@ -13,7 +13,7 @@
   <swiper class="banner" current="{{currentIndex}}" bindchange="swiperChange" indicator-dots>
     <swiper-item>
       <view style="position:relative;margin-top: 150rpx;">
-        <image style="width: 600rpx;height: 1100rpx;" src="../../img/mid1.png"></image>
+        <image style="width: 600rpx;height: 1100rpx;" src="http://dzrblog.asia/mid1.png"></image>
         <view class="text" style="height:500rpx;width: 550rpx;position: absolute;">
           WISStudio，是以网络身份安全粤港联合实验室WISLab为基础筹建的本科生研发创新团队。WISStudio主要以技术研发为主，与现有研究生团队结合，以具体产品为实践，打造产学研一体化团队。不管是热爱技术编程的同学，还是喜欢学术研究，准备保研考研的同学，亦或是喜欢产品设计的同学，我们都诚邀你的加入。
         </view>
@@ -21,7 +21,7 @@
     </swiper-item>
     <swiper-item>
       <view style="position: relative;">
-        <image style="width: 640rpx;height: 1250rpx;" src="../../img/web.png"></image>
+        <image style="width: 640rpx;height: 1250rpx;" src="http://dzrblog.asia/web.png"></image>
         <view class="introduce">
           <view class="version">
             前端开发是创建WEB页面或小程序等前端界面呈现给用户的过程，实现互联网产品的用户界面交互，用界面将用户与计算机连接起来。
@@ -37,7 +37,7 @@
     </swiper-item>
     <swiper-item>
       <view style="position: relative;">
-        <image style="width: 640rpx;height: 1250rpx;" src="../../img/backstage.png"></image>
+        <image style="width: 640rpx;height: 1250rpx;" src="http://dzrblog.asia/backstage.png"></image>
         <view class="introduce">
           <view class="version">
             后台是与数据和信息打交道的方向, 通过对业务的梳理和数据的交互, 为数据为前端, 移动端提供着强有力的支持, 间接通过前台体现后台价值。
@@ -53,7 +53,7 @@
     </swiper-item>
     <swiper-item>
       <view>
-        <image style="width: 640rpx;height: 1250rpx;" src="../../img/Android.png"></image>
+        <image style="width: 640rpx;height: 1250rpx;" src="http://dzrblog.asia/Android.png"></image>
         <view class="introduce">
           <view class="version">
             Android系统作为世界第一大手机操作系统，使得Android应用开发炙手可热。
@@ -69,7 +69,7 @@
     </swiper-item>
     <swiper-item>
       <view>
-        <image style="width: 640rpx;height: 1250rpx;" src="../../img/UI.png"></image>
+        <image style="width: 640rpx;height: 1250rpx;" src="http://dzrblog.asia/UI.png"></image>
         <view class="introduce">
           <view class="version">
             主要面向有经验的同学，熟悉PS，Axure等软件，有一定的审美能力，有团队协作意识，负责工作室相关项目的UI界面设计。

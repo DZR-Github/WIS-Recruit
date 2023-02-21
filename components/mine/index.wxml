@@ -1,8 +1,8 @@
 <!-- 个人信息页 -->
 
 <view style="width: 100vw;height: 100vh;">
-  <image style="width: 400rpx;height: 200rpx;position: fixed;top: 180rpx;left: 180rpx;" mode="aspectFill" src="../../img/midMine.png"></image>
-  <image style="width: 200rpx; height: 200rpx;position: fixed;top: 400rpx;left: -110rpx;" src="../../img/circle_mine.png"></image>
+  <image style="width: 400rpx;height: 200rpx;position: fixed;top: 180rpx;left: 180rpx;" mode="aspectFill" src="http://dzrblog.asia/midMine.png"></image>
+  <image style="width: 200rpx; height: 200rpx;position: fixed;top: 400rpx;left: -110rpx;" src="http://dzrblog.asia/circle_mine.png"></image>
   <image style="width: 50rpx; height: 50rpx;position: fixed;top: 100rpx;left: 110rpx;" src="../../img/circle2_mine.png"></image>
   <view style="width: 100vw;height: 900rpx;background-color: white;position: fixed;bottom: 110rpx;border-radius: 50rpx 50rpx 0 0; "></view>
   <view style="line-height: 200rpx;text-align:center;width: 70vw;height: 150rpx;background-color: white;position: fixed;bottom: 935rpx;left: 15vw;border-radius: 30rpx; border: 1rpx solid rgb(224, 223, 223);">

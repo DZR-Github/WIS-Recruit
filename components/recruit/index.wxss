@@ -14,7 +14,7 @@
   height: 80rpx;
   background-color: rgba(61, 63, 90, 0.4);
   margin-left: 20rpx;
-  margin-bottom: 40rpx;
+  
   border-radius: 80rpx;
   padding-left: 20rpx;
   line-height: 80rpx;
