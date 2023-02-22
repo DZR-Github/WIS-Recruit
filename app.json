@@ -7,8 +7,10 @@
     "pages/Information/Information",
     "pages/Progress/Progress",
     "pages/Reservation/Reservation"
-
   ],
+  "useExtendedLib": {
+    "weui": true
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

@@ -12,7 +12,7 @@ App({
         //console.log(res.code)
         //发送 res.code 到后台换取 userId,token
         wx.request({
-          url: 'http://43.139.33.166/api/user/info',
+          url: 'http://wisstudio.top/api/user/info',
           data: res.code,
           method: 'POST',
           success: (result) => { //成功以后将userId跟token存到全局变量
@@ -20,11 +20,9 @@ App({
             //console.log(result)
             that.globalData.userId = result.data.data.id
             that.globalData.token = result.data.data.token
-
           },
           fail: (res) => {
-            console.log("fail")
-            console.log(res)
+            console.log("login fail!")
           },
           complete: (res) => {},
         })
@@ -36,6 +34,7 @@ App({
     onload: 0,
     avatarUrl: "",
     nickName: "",
+    entryStatus: 0,
     selected: 0, //通过selected的值来控制 tabbar 的切换，0是'主页'，1是'招新'，2是'我的'
     userId: " ", //将登陆后获取的userId跟token放在全局变量
     token: " ",

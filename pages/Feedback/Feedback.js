@@ -9,6 +9,7 @@ Page({
    */
   data: {
     feedback: "",
+    show: false
   },
   setSelected() {
     //let app = getApp()
@@ -20,28 +21,38 @@ Page({
       feedback: e.detail.value
     })
   },
+  tapDialogButton() {
+    this.setData({
+      show: false
+    })
+  },
   commit() {
     const that = this
-    wx.request({ //发送请求提交用户反馈
-      url: 'http://43.139.33.166/api/user/addFeedback/' + app.globalData.userId,
-      data: {
-        "content": that.data.feedback
-      },
-      header: {
-        "token": app.globalData.token
-      },
-      method: 'GET',
-      success: (result) => {
-        //console.log("Get openID success!")
-        console.log(result)
 
-      },
-      fail: (res) => {
-        console.log("fail")
-        console.log(res)
-      },
-      complete: (res) => {},
-    })
+    if (this.data.feedback) {
+      wx.request({ //发送请求提交用户反馈
+        url: 'http://wisstudio.top/api/user/addFeedback/' + app.globalData.userId,
+        data: {
+          "content": that.data.feedback
+        },
+        header: {
+          "token": app.globalData.token
+        },
+        method: 'GET',
+        success: (result) => {
+          //console.log("Get openID success!")
+          //console.log(result)
+          that.setData({
+            show: true
+          })
+        },
+        fail: (res) => {
+          console.log("fail")
+          console.log(res)
+        },
+        complete: (res) => {},
+      })
+    }
   },
 
   /**

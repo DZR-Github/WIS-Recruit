@@ -33,6 +33,9 @@
       </view>
     </view>
     <button class="btn" hover-class="btn_hover" form-type="submit">提交</button>
+    <mp-dialog title="" show="{{show}}" bindbuttontap="tapDialogButton" buttons="{{[ {text: '确认'}]}}">
+      <view style="color:black;">{{showMsg}}</view>
+    </mp-dialog>
   </form>
   <view class="bgHidden" style="display: {{choice===0?NONE:BLOCK}};"></view>
   <view class="choiceBox" style="animation: {{Animate}};">

@@ -41,7 +41,7 @@ Page({
     const status = app.globalData.progress_status
     //if (status == 0) { //status等于0时代表未发送过请求，需要发送请求获取数据；否则直接从全局变量中取值
     wx.request({ //发送请求获取进度
-      url: 'http://43.139.33.166/api/user/progress/' + app.globalData.userId,
+      url: 'http://wisstudio.top/api/user/progress/' + app.globalData.userId,
       header: {
         "token": app.globalData.token
       },

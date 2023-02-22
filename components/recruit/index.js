@@ -13,7 +13,9 @@ Component({
     Animate: " ", //点击'方向'的动画
     Animate_Academy: " ", //点击'学院'的动画
     phoneDes: "",
-    stuNumDes: ""
+    stuNumDes: "",
+    show: false,
+    showMsg: " "
   },
   lifetimes: {
     attached() {
@@ -30,36 +32,48 @@ Component({
 
   },
   methods: {
-    commit(e) {
-      //console.log(e.detail.value)
-      const Data = e.detail.value
-      //console.log(app.globalData.userId + "&&token=" + app.globalData.token)
-
-      wx.request({ //点击提交后发送请求，报名
-        url: 'http://43.139.33.166/api/user/info/' + app.globalData.userId,
-        data: {
-          "userName": Data.username,
-          "stuNumber": Data.stuNumber,
-          "academy": Data.academy,
-          "direction": Data.direction,
-          "phoneNum": Data.phoneNum,
-          "introduction": Data.introduction
-        },
-        header: {
-          "token": app.globalData.token
-        },
-        method: 'PUT',
-        success: (result) => {
-          console.log("Change msg success!")
-          console.log(result)
-
-        },
-        fail: (res) => {
-          console.log("fail")
-          console.log(res)
-        },
-        complete: (res) => {},
+    tapDialogButton() {
+      this.setData({
+        show: false
       })
+    },
+    commit(e) {
+      const Data = e.detail.value
+      const that = this
+      if (!Data.username || !Data.stuNumber || !Data.academy || !Data.direction || !Data.phoneNum || !Data.introduction) {
+        this.setData({
+          showMsg: "请将表单内容填写完整！",
+          show: true
+        })
+      } else {
+        wx.request({ //点击提交后发送请求，报名
+          url: 'http://wisstudio.top/api/user/info/' + app.globalData.userId,
+          data: {
+            "userName": Data.username,
+            "stuNumber": Data.stuNumber,
+            "academy": Data.academy,
+            "direction": Data.direction,
+            "phoneNum": Data.phoneNum,
+            "introduction": Data.introduction
+          },
+          header: {
+            "token": app.globalData.token
+          },
+          method: 'PUT',
+          success: (result) => {
+            app.globalData.entryStatus = 1;
+            that.setData({
+              showMsg: "恭喜你，报名成功！",
+              show: true
+            })
+          },
+          fail: (res) => {
+            console.log("fail")
+            console.log(res)
+          },
+          complete: (res) => {},
+        })
+      }
 
     },
     setChoice() {
