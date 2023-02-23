@@ -66,6 +66,7 @@ Component({
               showMsg: "恭喜你，报名成功！",
               show: true
             })
+            
           },
           fail: (res) => {
             console.log("fail")

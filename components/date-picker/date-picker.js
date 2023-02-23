@@ -43,7 +43,9 @@ Component({
       //获取日期列表
       let date_list = this.getDiffDate(start_day, end_day);
       //获取时间列表
-      let time_list = this.getTimeList(this.properties.start_time, this.properties.end_time, this.properties.step);
+      // let time_list = this.getTimeList(this.properties.start_time, this.properties.end_time, this.properties.step);
+      // let time_list = ["10:00-10:20","10:20-10:40","10:40-11:00","11:00-11:20","11:20-11:40","11:40-12:00","15:00-15:20","15:20-15:40","15:40-16:00","16:00-16:20","16:20-16:40","16:40-17:00","17:00-17:20","17:20-17:40","17:40-18:00","19:00-19:20","19:20-19:40","19:40-20:00","20:00-20:20","20:20-20:40","20:40-21:00"]
+      let time_list = ["10:00-11:00","11:00-12:00","15:00-16:00","16:00-17:00","17:00-18:00","19:00-20:00","20:00-21:00"]
       console.log(time_list);
       this.setData({
           // date_time: [date_column, time_column],
@@ -108,43 +110,43 @@ Component({
           return string
       },
       //获取时间区间列表，输入(起始时间，结束时间，步长)
-      getTimeList(start, end, step) {
-          let start_time = new Date();
-          //设置起始时间
-          start_time.setHours(start, 0, 0);
-          console.log(start_time);
-          //设置结束时间
-          let end_time = new Date();
-          end_time.setHours(end, 0, 0);
-          let startG = start_time.getTime(); //起始时间的格林时间
-          let endG = end_time.getTime(); //起始时间的格林时间
-          let step_ms = step * 60 * 1000;
-          let timeArr = [];
-          while (startG < endG) {
-              let time = this.timeAdd(startG, step_ms);
-              timeArr.push(time);
-              startG += step_ms;
-          }
+      // getTimeList(start, end, step) {
+      //     let start_time = new Date();
+      //     //设置起始时间
+      //     start_time.setHours(start, 0, 0);
+      //     console.log(start_time);
+      //     //设置结束时间
+      //     let end_time = new Date();
+      //     end_time.setHours(end, 0, 0);
+      //     let startG = start_time.getTime(); //起始时间的格林时间
+      //     let endG = end_time.getTime(); //起始时间的格林时间
+      //     let step_ms = step * 60 * 1000;
+      //     let timeArr = [];
+      //     while (startG < endG) {
+      //         let time = this.timeAdd(startG, step_ms);
+      //         timeArr.push(time);
+      //         startG += step_ms;
+      //     }
 
-          return timeArr;
-      },
-      timeAdd(time1, add) {
-          var nd = new Date(time1); //创建时间对象
-          //获取起始时间的时分秒
-          var hh1 = nd.getHours();
-          var mm1 = nd.getMinutes();
-          if (hh1 <= 9) hh1 = "0" + hh1;
-          if (mm1 <= 9) mm1 = "0" + mm1;
-          nd = nd.valueOf(); //转换为毫秒数
-          nd = nd + Number(add);
-          nd = new Date(nd);
-          var hh2 = nd.getHours();
-          var mm2 = nd.getMinutes();
-          if (hh2 <= 9) hh2 = "0" + hh2;
-          if (mm2 <= 9) mm2 = "0" + mm2;
-          var time = hh1 + ":" + mm1 + "-" + hh2 + ":" + mm2;
-          return time; //时间段
-      },
+      //     return timeArr;
+      // },
+      // timeAdd(time1, add) {
+      //     var nd = new Date(time1); //创建时间对象
+      //     //获取起始时间的时分秒
+      //     var hh1 = nd.getHours();
+      //     var mm1 = nd.getMinutes();
+      //     if (hh1 <= 9) hh1 = "0" + hh1;
+      //     if (mm1 <= 9) mm1 = "0" + mm1;
+      //     nd = nd.valueOf(); //转换为毫秒数
+      //     nd = nd + Number(add);
+      //     nd = new Date(nd);
+      //     var hh2 = nd.getHours();
+      //     var mm2 = nd.getMinutes();
+      //     if (hh2 <= 9) hh2 = "0" + hh2;
+      //     if (mm2 <= 9) mm2 = "0" + mm2;
+      //     var time = hh1 + ":" + mm1 + "-" + hh2 + ":" + mm2;
+      //     return time; //时间段
+      // },
       change: function (e) {
           const val = e.detail.value;
           //val[0]表示选择的第一列序号，val[1]表示选择的第二列序号

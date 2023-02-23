@@ -133,7 +133,11 @@
   left: 50%;
   margin-left: -290rpx;
 }
+.characters{
+  row-gap: 0rpx;
+}
 .version{
+  width: 101%;
   text-indent: 2em;
   text-align: left;
   font-family:'fangsong';

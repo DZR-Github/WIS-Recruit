@@ -7,9 +7,8 @@ Page({
   data: {
      selectDate:"暂无",
      directionData:"前端",
+     directionCode:"",
      lineData:"暂无预约 !",
-     timeData:"",
-     flag:false,
      commitDisabled:true,
      cancelDisabled:true,
      chooseDisabled:false,
@@ -34,26 +33,45 @@ Page({
    })
   },
   CommitReservation(){
-    // 禁用选择时间的按钮
-    this.setData({
-      chooseDisabled:true
-    })
     let TimeDate=this.data.selectDate;
     wx.request({ //发送请求提交面试预约信息
-      url: 'http://43.139.33.166/api/user/interview/1',
+      url: 'http://43.139.33.166/api/user/interview/'+app.globalData.userId,
       data: {
-        "userId": app.globalData.userId,
-        "token": app.globalData.token,
         "interviewTime":TimeDate.slice(0,11)+TimeDate.slice(15,20)+":00",
+      },
+      header:{
+        "token": app.globalData.token
       },
       method: 'POST',
       success: (result) => {
         console.log(result)
         this.setData({
-          cancelDisabled:!this.data.cancelDisabled
+          cancelDisabled:!this.data.cancelDisabled,
+          commitDisabled:!this.data.commitDisabled,
+          chooseDisabled:true
         })
-        this.setData({
-          commitDisabled:!this.data.commitDisabled
+        wx.request({ //发送请求获取当前排队进度
+          url: 'http://43.139.33.166/api/user/line/'+app.globalData.userId,
+          data:{   
+            "direction":wx.getStorageSync('dirationCode1')
+          },
+          header: {
+            "token": app.globalData.token,
+          },
+          method: 'POST',
+          success: (result) => {
+            console.log(result)
+            if(result.data.data!=undefined){
+              this.setData({
+                lineData:"前面还有 "+result.data.data+" 位"
+              })
+            }
+          },
+          fail: (res) => {
+            console.log("fail")
+            console.log(res)
+          },
+          complete: (res) => {},
         })
       },
       fail: (res) => {
@@ -62,30 +80,11 @@ Page({
       },
       complete: (res) => {},
     })
-    wx.request({ //发送请求获取当前排队进度
-      url: 'http://43.139.33.166/api/user/line/1',
-      data: {
-        "userId": app.globalData.userId,
-        "token": app.globalData.token,
-      },
-      method: 'GET',
-      success: (result) => {
-        console.log(result)
-        this.setData({
-          lineData:"当前位于队列中的第"+result.data.data+"个"
-        })
-      },
-      fail: (res) => {
-        console.log("fail")
-        console.log(res)
-      },
-      complete: (res) => {},
-    })
+    
   },
   CancelReservation(){
     wx.request({ //发送请求取消面试预约信息
       url: 'http://43.139.33.166/api/user/interview/'+app.globalData.userId,
-     
       header:{
         "token": app.globalData.token
       },
@@ -93,16 +92,11 @@ Page({
       success: (result) => {
         console.log(result)
         this.setData({
-          lineData:"暂无预约 !"
-        })
-        this.setData({
-          cancelDisabled:!this.data.cancelDisabled
-        })
-        this.setData({
-          commitDisabled:!this.data.commitDisabled
-        })
-        this.setData({
-          chooseDisabled:false
+          lineData:"暂无预约 !",
+          cancelDisabled:!this.data.cancelDisabled,
+          commitDisabled:!this.data.commitDisabled,
+          chooseDisabled:false,
+          selectDate:"暂无"
         })
       },
       fail: (res) => {
@@ -120,7 +114,6 @@ Page({
     this.picker=this.selectComponent("#picker")
   },
  
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -132,6 +125,98 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow() {
+    //先将选择器清零
+    // 这里调用用户查看面试时间的接口
+    wx.request({ 
+      url: 'http://43.139.33.166/api/user/interview/'+app.globalData.userId,
+      header:{
+        "token": app.globalData.token,
+      },
+      method: 'GET',
+      success: (result) => {
+        console.log(result)
+        console.log(result.data.data.interviewTime);
+        if(result.data.data.interviewTime!=null){
+          // 显示预约面试的时间
+          this.setData({
+            selectDate:result.data.data.interviewTime,
+            cancelDisabled:false,
+            chooseDisabled:true
+         })
+        }else{
+          this.setData({
+            selectDate:"暂无"
+         })
+        }
+      },
+      fail: (res) => {
+        console.log("fail")
+        console.log(res)
+      },
+      complete: (res) => {},
+    })
+    wx.request({ //发送请求获取个人信息
+      url: 'http://43.139.33.166/api/user/info/' + app.globalData.userId,
+      header: {
+        "token": app.globalData.token
+      },
+      method: 'GET',
+      success: (result) => {
+        console.log(result)
+        console.log(result.data.data.direction);
+        if(result.data.data.direction=="前端"){
+          this.setData({
+            directionCode:0,
+            directionData:result.data.data.direction
+          })
+        }else if(result.data.data.direction=="后台"){
+          this.setData({
+            directionCode:1,
+            directionData:result.data.data.direction
+          })
+        }else if(result.data.data.direction=="安卓"){
+          this.setData({
+            directionCode:2,
+            directionData:result.data.data.direction
+          })
+        }else if(result.data.data.direction=="UI"){
+          this.setData({
+            directionCode:3,
+            directionData:result.data.data.direction
+          })
+        }
+        //本地存储用户选择的方向
+        wx.setStorageSync('dirationCode1',this.data.directionCode);
+        console.log(wx.getStorageSync('dirationCode1'));
+        wx.request({ //发送请求获取当前排队进度
+          url: 'http://43.139.33.166/api/user/line/'+app.globalData.userId,
+          data: {   
+            "direction": wx.getStorageSync('dirationCode1')
+          },
+          header: {
+            "token": app.globalData.token,
+          },
+          method: 'POST',
+          success: (result) => {
+            console.log(result)
+            if(result.data.data!=undefined){
+            this.setData({
+              lineData:"前面还有 "+result.data.data+" 位"
+            })
+          }
+          },
+          fail: (res) => {
+            console.log("fail")
+            console.log(res)
+          },
+          complete: (res) => {},
+        })
+      },
+      fail: (res) => {
+        console.log(res)
+      },
+      complete: (res) => {},
+    })
   },
 
   /**

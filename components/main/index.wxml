@@ -22,12 +22,12 @@
     <swiper-item>
       <view style="position: relative;">
         <image style="width: 640rpx;height: 1250rpx;" src="http://dzrblog.asia/web.png"></image>
-        <view class="introduce">
+        <view class="introduce characters">
           <view class="version">
             前端开发是创建WEB页面或小程序等前端界面呈现给用户的过程，实现互联网产品的用户界面交互，用界面将用户与计算机连接起来。
           </view>
           <view class="version">
-            WISStudio前端组基于HTML，CSS及JavaScript为基础知识，在衍生框架与各种技术的实践下，将产品的UI设计稿在用户的终端上实现。前端方向也不仅局限于WEB页面与小程序，还可以深入数据可视化、Serverless技术、ReactNative与flutter跨平台技术等。
+            WISStudio前端组基于HTML,CSS及JavaScript为基础知识,在衍生框架与各种技术的实践下,将产品的UI设计稿在用户的终端上实现。前端方向不仅局限于WEB页面与小程序,还可以深入数据可视化、Serverless技术、ReactNative与flutter跨平台技术等。
           </view>
           <view class="version">
             前端组欢迎你们的加入！
