@@ -5,6 +5,7 @@ Component({
    * 页面的初始数据
    */
   data: {
+    array: ['计算机学院', '信息工程学院', '机电工程学院', '自动化学院', '生物医药学院', '轻工化工学院', '土木与交通工程学院', '环境科学与工程学院', '外国语学院', '材料与能源学院', '物理与光电工程学院', '集成电路学院'],
     Direction: "",
     Academy: "",
     choice: 0,
@@ -15,7 +16,25 @@ Component({
     phoneDes: "",
     stuNumDes: "",
     show: false,
-    showMsg: " "
+    showMsg: " ",
+    showActionsheet: false,
+    groups: [{
+        text: '前端',
+        value: "前端"
+      },
+      {
+        text: '后台',
+        value: "后台"
+      },
+      {
+        text: '安卓',
+        value: "安卓"
+      },
+      {
+        text: 'UI',
+        value: "UI"
+      }
+    ]
   },
   lifetimes: {
     attached() {
@@ -32,6 +51,18 @@ Component({
 
   },
   methods: {
+    close: function () {
+      this.setData({
+        showActionsheet: false
+      })
+    },
+    btnClick(e) {
+      // console.log(e.detail.value)
+      this.setData({
+        Direction: e.detail.value
+      })
+      this.close()
+    },
     tapDialogButton() {
       this.setData({
         show: false
@@ -66,7 +97,6 @@ Component({
               showMsg: "恭喜你，报名成功！",
               show: true
             })
-            
           },
           fail: (res) => {
             console.log("fail")
@@ -77,12 +107,17 @@ Component({
       }
 
     },
-    setChoice() {
+    setActionsheet() {
       this.setData({
-        choice: 1,
-        Animate: "appear 0.5s ease 1 forwards"
+        showActionsheet: true
       })
     },
+    bindPickerChange: function (e) {
+      this.setData({
+        Academy: this.data.array[e.detail.value],
+      })
+    },
+
     setChoice_2() {
       this.setData({
         choice: 1,
@@ -130,21 +165,7 @@ Component({
         })
       }
       //console.log(e.detail.value)
-    },
-    choose(e) {
-      // console.log(e.currentTarget.id)
-      const that = this
-      const directions = ['前端', '后台', '安卓', 'UI']
-      this.setData({
-        Direction: directions[e.currentTarget.id],
-        choice: 0,
-        Animate: "disappear 0.5s ease 1 forwards"
-      })
-      setTimeout(() => {
-        that.setData({
-          Animate: " "
-        })
-      }, 500)
     }
+
   }
 })

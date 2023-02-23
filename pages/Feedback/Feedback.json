@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "background": "../../components/background/index",
-    "mp-dialog": "weui-miniprogram/dialog/dialog"
+    "mp-dialog": "weui-miniprogram/dialog/dialog",
+    "mp-actionSheet": "weui-miniprogram/actionsheet/actionsheet"
   }
 }

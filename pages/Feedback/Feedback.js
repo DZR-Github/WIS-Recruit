@@ -9,7 +9,34 @@ Page({
    */
   data: {
     feedback: "",
-    show: false
+    show: false,
+    showActionsheet: true,
+    groups: [{
+        text: '前端',
+        value: 1
+      },
+      {
+        text: '后台',
+        value: 2
+      },
+      {
+        text: '安卓',
+        value: 3
+      },
+      {
+        text: 'UI',
+        value: 4
+      }
+    ]
+  },
+  close: function () {
+    this.setData({
+      showActionsheet: false
+    })
+  },
+  btnClick(e) {
+    console.log(e)
+    this.close()
   },
   setSelected() {
     //let app = getApp()

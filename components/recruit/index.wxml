@@ -1,7 +1,6 @@
 <!-- 招新报名表页 -->
-<view style="width: 100vw;height: 100vh;text-align: center;position: relative;">
+<view style="width: 100vw;height: 120vh;text-align: center;position: relative;">
   <image style="width: 200rpx;height: 75rpx;margin-top: 120rpx;" src="../../img/entryForm.png"></image>
-
   <form catchsubmit="commit">
     <view class="Box">
       <view class="smallBox" style="margin-top: 50rpx;">
@@ -15,11 +14,14 @@
       </view>
       <view class="smallBox" style="margin-bottom: 40rpx;">
         <image class="icon" src="../../img/building.png"></image>
-        <input class="Input" name="academy" value="{{Academy}}" type="text" placeholder="请输入学院" bindtap="setChoice_2" placeholder-class="placeholder" disabled="true" />
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <input class="Input" name="academy" value="{{Academy}}" type="text" placeholder="请输入学院" bindtap="setChoice_2" placeholder-class="placeholder" disabled="true" />
+        </picker>
+        <!-- <input class="Input" name="academy" value="{{Academy}}" type="text" placeholder="请输入学院" bindtap="setChoice_2" placeholder-class="placeholder" disabled="true" /> -->
       </view>
       <view class="smallBox" style="margin-bottom: 40rpx;">
         <image class="icon" src="../../img/compass.png"></image>
-        <view style="position: relative;"><input class="Input" disabled="true" value="{{Direction}}" bindtap="setChoice" name="direction" id="direction" type="text" placeholder="选择你的方向" placeholder-class="placeholder" />
+        <view style="position: relative;"><input class="Input" disabled="true" value="{{Direction}}" bindtap="setActionsheet" name="direction" id="direction" type="text" placeholder="选择你的方向" placeholder-class="placeholder" />
         </view>
       </view>
       <view class="smallBox">
@@ -37,14 +39,16 @@
       <view style="color:black;">{{showMsg}}</view>
     </mp-dialog>
   </form>
-  <view class="bgHidden" style="display: {{choice===0?NONE:BLOCK}};"></view>
-  <view class="choiceBox" style="animation: {{Animate}};">
+  <mp-actionSheet bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{groups}}">
+  </mp-actionSheet>
+  <!-- <view class="bgHidden" style="display: {{choice===0?NONE:BLOCK}};"></view> -->
+  <!-- <view class="choiceBox" style="animation: {{Animate}};">
     <input class="choice" id="0" bindtap="choose" style="margin-top: 0;border-top-left-radius: 50rpx;border-top-right-radius: 50rpx;" value="前端" disabled="true"></input>
     <input class="choice" id="1" bindtap="choose" value="后台" disabled="true"></input>
     <input class="choice" id="2" bindtap="choose" value="安卓" disabled="true"></input>
     <view class="choice" style="height: 160rpx;" id="3" bindtap="choose">UI</view>
-  </view>
-  <view class="choice_academy_box" style="animation: {{Animate_Academy}};">
+  </view> -->
+  <!-- <view class="choice_academy_box" style="animation: {{Animate_Academy}};">
     选择你的学院
     <view class="choice_academy">
       <view class="choiceBox_2" id="0" bindtap="choose_academy">计算机</view>
@@ -60,5 +64,5 @@
       <view class="choiceBox_2" id="10" bindtap="choose_academy">物理与光电工程</view>
       <view class="choiceBox_2" id="11" bindtap="choose_academy">集成电路</view>
     </view>
-  </view>
+  </view> -->
 </view>

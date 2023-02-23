@@ -18,4 +18,8 @@
   <mp-dialog title="" show="{{show}}" bindbuttontap="tapDialogButton" buttons="{{[ {text: '确认'}]}}">
     <view style="color:black;">提交成功，感谢您的反馈！</view>
   </mp-dialog>
+
+
+  <!-- <mp-actionSheet bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{groups}}">
+  </mp-actionSheet> -->
 </view>

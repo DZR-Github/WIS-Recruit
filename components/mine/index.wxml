@@ -1,11 +1,11 @@
 <!-- 个人信息页 -->
 <view style="width: 100vw;height: 100vh;">
-  <image style="width: 400rpx;height: 200rpx;position: fixed;top: 180rpx;left: 180rpx;" mode="aspectFill" src="http://dzrblog.asia/midMine.png"></image>
-  <image style="width: 200rpx; height: 200rpx;position: fixed;top: 400rpx;left: -110rpx;" src="http://dzrblog.asia/circle_mine.png"></image>
-  <image style="width: 50rpx; height: 50rpx;position: fixed;top: 100rpx;left: 110rpx;" src="../../img/circle2_mine.png"></image>
-  <view style="width: 100vw;height: 600rpx;background-color: white;position: fixed;bottom: 110rpx;border-radius: 50rpx 50rpx 0 0; "></view>
+  <image style="width: 400rpx;height: 200rpx;position: fixed;top: 230rpx;left: 180rpx;" mode="aspectFill" src="http://dzrblog.asia/midMine.png"></image>
+  <image style="width: 200rpx; height: 200rpx;position: fixed;top: 450rpx;left: -110rpx;" src="http://dzrblog.asia/circle_mine.png"></image>
+  <image style="width: 50rpx; height: 50rpx;position: fixed;top: 150rpx;left: 110rpx;" src="../../img/circle2_mine.png"></image>
+  <view style="width: 100vw;height: 750rpx;background-color: white;position: fixed;bottom: 7vh;border-radius: 50rpx 50rpx 0 0; "></view>
 
-  <view style="width: 100vw;position: fixed;bottom: 700rpx;height: 100rpx;">
+  <view style="width: 100vw;position: fixed;bottom: 850rpx;height: 100rpx;">
     <view style="text-align: center;line-height: 100rpx;margin: auto;width: 180rpx;height: 180rpx;background-color: white;border-radius:100rpx;border: 1rpx solid rgb(224, 223, 223);">
       <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
         <image class="avatar" src="{{avatarUrl}}"></image>
@@ -16,41 +16,41 @@
   <!-- 个人资料 -->
 
   <navigator url="{{urls[0]}}" open-type="navigate">
-    <view style="width: 100vw;height: 100rpx;position: fixed;bottom: 500rpx;">
-      <image style="width: 100rpx; height: 100rpx;position: absolute;left: 20rpx;" src="../../img/note.png"></image>
+    <view style="width: 100vw;height: 100rpx;position: fixed;bottom: 600rpx;">
+      <image style="width: 80rpx; height: 80rpx;position: absolute;left: 40rpx;top: 10rpx;" src="../../img/note.png"></image>
       <image style="width: 100rpx; height: 100rpx;position: absolute;right: 0rpx;" src="../../img/arrow_right.png"></image>
       <view style="margin-left:140rpx;height: 100rpx;line-height: 100rpx;font-size: large;color: gray;">个人资料</view>
     </view>
-    <view style="width: 100vw;height: 2rpx;background-color: rgb(224, 223, 223);position: fixed;bottom: 500rpx;"></view>
+    <view style="width: 100vw;height: 2rpx;background-color: rgb(224, 223, 223);position: fixed;bottom: 600rpx;"></view>
   </navigator>
   <!-- 进度查询 -->
 
   <navigator url="{{urls[1]}}" open-type="navigate">
-    <view style="width: 100vw;height: 100rpx;position: fixed;bottom: 400rpx;">
-      <image style="width: 100rpx; height: 100rpx;position: absolute;left: 20rpx;" src="../../img/pin.png"></image>
+    <view style="width: 100vw;height: 100rpx;position: fixed;bottom: 500rpx;">
+      <image style="width: 80rpx; height: 80rpx;position: absolute;left: 40rpx;top: 10rpx;" src="../../img/pin.png"></image>
       <image style="width: 100rpx; height: 100rpx;position: absolute;right: 0rpx;" src="../../img/arrow_right.png"></image>
       <view style="margin-left:140rpx;height: 100rpx;line-height: 100rpx;font-size: large;color: gray;">进度查询</view>
     </view>
-    <view style="width: 100vw;height: 2rpx;background-color: rgb(224, 223, 223);position: fixed;bottom: 400rpx;"></view>
+    <view style="width: 100vw;height: 2rpx;background-color: rgb(224, 223, 223);position: fixed;bottom: 500rpx;"></view>
   </navigator>
   <!-- 我要反馈 -->
 
   <navigator url="{{urls[2]}}" open-type="navigate">
-    <view style="width: 100vw;height: 100rpx;position: fixed;bottom: 300rpx;">
-      <image style="width: 100rpx; height: 100rpx;position: absolute;left: 20rpx;" src="../../img/mail.png"></image>
+    <view style="width: 100vw;height: 100rpx;position: fixed;bottom: 400rpx;">
+      <image style="width: 80rpx; height: 80rpx;position: absolute;left: 40rpx;top: 10rpx;" src="../../img/mail.png"></image>
       <image style="width: 100rpx; height: 100rpx;position: absolute;right: 0rpx;" src="../../img/arrow_right.png"></image>
       <view style="margin-left:140rpx;height: 100rpx;line-height: 100rpx; font-size: large;color: gray;">我要反馈</view>
     </view>
-    <view style="width: 100vw;height: 2rpx;background-color: rgb(224, 223, 223);position: fixed;bottom: 300rpx;"></view>
+    <view style="width: 100vw;height: 2rpx;background-color: rgb(224, 223, 223);position: fixed;bottom: 400rpx;"></view>
   </navigator>
   <!-- 预约面试 -->
 
   <navigator url="{{urls[3]}}" open-type="navigate">
-    <view style="width: 100vw;height: 100rpx;position: fixed;bottom: 200rpx;">
-      <image style="width: 80rpx; height: 80rpx;position: absolute;left: 35rpx;top:15rpx;" src="../../img/reservation.png"></image>
+    <view style="width: 100vw;height: 100rpx;position: fixed;bottom: 300rpx;">
+      <image style="width: 60rpx; height: 60rpx;position: absolute;left: 55rpx;top:25rpx;" src="../../img/reservation.png"></image>
       <image style="width: 100rpx; height: 100rpx;position: absolute;right: 0rpx;" src="../../img/arrow_right.png"></image>
       <view style="margin-left:140rpx;height: 100rpx;line-height: 100rpx; font-size: large;color: gray;">预约面试</view>
     </view>
-    <view style="width: 100vw;height: 2rpx;background-color: rgb(224, 223, 223);position: fixed;bottom: 200rpx;"></view>
+    <view style="width: 100vw;height: 2rpx;background-color: rgb(224, 223, 223);position: fixed;bottom: 300rpx;"></view>
   </navigator>
 </view>

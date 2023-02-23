@@ -1,33 +1,39 @@
 <!-- 主页面 -->
-<!-- 招新方向还没写好 -->
-<view style="width: 100vw;height: 100vh;overflow: hidden;">
+<view style="width: 100vw;height: 120vh;">
   <!-- 回退按钮 -->
-  <stars></stars>
+  <!-- <stars></stars> -->
   <navigator url="{{url}}" open-type="redirect">
-    <view style="height: 120rpx;width: 180rpx;top: 60rpx; left: -10rpx;position: fixed;z-index: 1;">
-      <image style="height: 120rpx;width: 180rpx;top: 60rpx; left: -10rpx;position: fixed;" src="../../img/back.png">
+    <view style="height: 120rpx;width: 180rpx;margin-top: 40rpx;">
+      <image style="height: 120rpx;width: 180rpx;" src="../../img/back.png">
       </image>
     </view>
   </navigator>
   <!-- 轮播图 -->
   <swiper class="banner" current="{{currentIndex}}" bindchange="swiperChange" indicator-dots>
+
     <swiper-item>
-      <view style="position:relative;margin-top: 150rpx;">
-        <image style="width: 600rpx;height: 1100rpx;" src="http://dzrblog.asia/mid1.png"></image>
-        <view class="text" style="height:500rpx;width: 550rpx;position: absolute;">
-          WISStudio，是以网络身份安全粤港联合实验室WISLab为基础筹建的本科生研发创新团队。WISStudio主要以技术研发为主，与现有研究生团队结合，以具体产品为实践，打造产学研一体化团队。不管是热爱技术编程的同学，还是喜欢学术研究，准备保研考研的同学，亦或是喜欢产品设计的同学，我们都诚邀你的加入。
+      <view style="position:relative;">
+        <image style="width: 500rpx;height: 443rpx;" src="http://dzrblog.asia/main_banner.png"></image>
+        <view class="introduce" style="padding-top: 250rpx;padding-bottom: 150rpx;">
+          <view class="version">
+            WISStudio，是以网络身份安全粤港联合实验室WISLab为基础筹建的本科生研发创新团队。
+          </view>
+          <view class="version">
+            WISStudio主要以技术研发为主，与现有研究生团队结合，以具体产品为实践，打造产学研一体化团队。不管是热爱技术编程的同学，还是喜欢学术研究，准备保研考研的同学，亦或是喜欢产品设计的同学，我们都诚邀你的加入。
+          </view>
         </view>
       </view>
     </swiper-item>
+
     <swiper-item>
       <view style="position: relative;">
-        <image style="width: 640rpx;height: 1250rpx;" src="http://dzrblog.asia/web.png"></image>
-        <view class="introduce characters">
+        <image style="width: 500rpx;height: 443rpx;" src="http://dzrblog.asia/Web_banner.png"></image>
+        <view class="introduce" style="padding-top: 220rpx;">
           <view class="version">
             前端开发是创建WEB页面或小程序等前端界面呈现给用户的过程，实现互联网产品的用户界面交互，用界面将用户与计算机连接起来。
           </view>
           <view class="version">
-            WISStudio前端组基于HTML,CSS及JavaScript为基础知识,在衍生框架与各种技术的实践下,将产品的UI设计稿在用户的终端上实现。前端方向不仅局限于WEB页面与小程序,还可以深入数据可视化、Serverless技术、ReactNative与flutter跨平台技术等。
+            WISStudio前端组基于HTML，CSS及JavaScript为基础知识，在衍生框架与各种技术的实践下，将产品的UI设计稿在用户的终端上实现。前端方向也不仅局限于WEB页面与小程序，还可以深入数据可视化、Serverless技术、ReactNative与flutter跨平台技术等。
           </view>
           <view class="version">
             前端组欢迎你们的加入！
@@ -35,10 +41,11 @@
         </view>
       </view>
     </swiper-item>
+
     <swiper-item>
       <view style="position: relative;">
-        <image style="width: 640rpx;height: 1250rpx;" src="http://dzrblog.asia/backstage.png"></image>
-        <view class="introduce">
+        <image style="width: 500rpx;height: 443rpx;" src="http://dzrblog.asia/backstage_banner.png"></image>
+        <view class="introduce" style="padding-bottom: 100rpx;">
           <view class="version">
             后台是与数据和信息打交道的方向, 通过对业务的梳理和数据的交互, 为数据为前端, 移动端提供着强有力的支持, 间接通过前台体现后台价值。
           </view>
@@ -52,9 +59,9 @@
       </view>
     </swiper-item>
     <swiper-item>
-      <view>
-        <image style="width: 640rpx;height: 1250rpx;" src="http://dzrblog.asia/Android.png"></image>
-        <view class="introduce">
+      <view style="position: relative;">
+        <image style="width: 500rpx;height: 443rpx;" src="http://dzrblog.asia/Andriod_banner.png"></image>
+        <view class="introduce" style="padding-bottom: 100rpx;">
           <view class="version">
             Android系统作为世界第一大手机操作系统，使得Android应用开发炙手可热。
           </view>
@@ -68,9 +75,9 @@
       </view>
     </swiper-item>
     <swiper-item>
-      <view>
-        <image style="width: 640rpx;height: 1250rpx;" src="http://dzrblog.asia/UI.png"></image>
-        <view class="introduce">
+      <view style="position: relative;">
+        <image style="width: 500rpx;height: 443rpx;" src="http://dzrblog.asia/UI_banner.png"></image>
+        <view class="introduce" style="padding-bottom: 300rpx;">
           <view class="version">
             主要面向有经验的同学，熟悉PS，Axure等软件，有一定的审美能力，有团队协作意识，负责工作室相关项目的UI界面设计。
           </view>
@@ -82,10 +89,12 @@
     </swiper-item>
   </swiper>
   <!-- 左、右按钮 -->
-  <view bindtap="moveLeft" class="left">
-    <image class="leftImage" src="../../img/left.png"></image>
-  </view>
-  <view bindtap="moveRight" class="right">
-    <image class="rightImage" src="../../img/right.png"></image>
+  <view class="btnBox">
+    <view bindtap="moveLeft" class="left">
+      <image class="leftImage" src="../../img/left.png"></image>
+    </view>
+    <view bindtap="moveRight" class="right">
+      <image class="rightImage" src="../../img/right.png"></image>
+    </view>
   </view>
 </view>

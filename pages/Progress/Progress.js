@@ -38,8 +38,6 @@ Page({
    */
   onShow() {
     const that = this //将this赋值给that，在请求中使用that
-    const status = app.globalData.progress_status
-    //if (status == 0) { //status等于0时代表未发送过请求，需要发送请求获取数据；否则直接从全局变量中取值
     wx.request({ //发送请求获取进度
       url: 'http://wisstudio.top/api/user/progress/' + app.globalData.userId,
       header: {
@@ -83,12 +81,6 @@ Page({
           })
           app.globalData.finalResult = "未通过"
         }
-
-        app.globalData.progress_status = 1
-        app.globalData.progress.write = arr[0]
-        app.globalData.progress.interview = arr[1]
-        app.globalData.progress.firstItem = arr[2]
-        app.globalData.progress.secondItem = arr[3]
       },
       fail: (res) => {
         console.log("fail")
@@ -97,15 +89,6 @@ Page({
       complete: (res) => {},
     })
 
-    // } else {
-    //   that.setData({
-    //     write: app.globalData.progress.write,
-    //     interview: app.globalData.progress.interview,
-    //     firstItem: app.globalData.progress.firstItem,
-    //     secondItem: app.globalData.progress.secondItem,
-    //     finalResult: app.globalData.finalResult
-    //   })
-    // }
   },
 
   /**

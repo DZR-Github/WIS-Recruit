@@ -1,6 +1,6 @@
 <!-- 主页面 -->
 
-<view style="height: 100vh;width: 100vw;overflow: hidden;">
+<view style="height: 100vh;width: 100vw;">
   <background></background>
   <main style="display: {{selected===0?FLEX:NONE}};"></main>
   <recruit style="display: {{selected===1?FLEX:NONE}};"></recruit>

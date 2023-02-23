@@ -17,38 +17,49 @@
 }
 
 .left {
-  position: fixed;
-  bottom: 195rpx;
+  position: absolute;
+  /* bottom: 195rpx; */
   left: 20rpx;
   width: 110rpx;
   height: 110rpx;
 }
 
 .leftImage {
-  position: fixed;
-  bottom: 160rpx;
+  position: absolute;
+  /* bottom: 160rpx; */
   left: -20rpx;
+
   width: 180rpx;
   height: 180rpx;
-  animation: leftAnimate 2s ease infinite;
+  /* animation: leftAnimate 2s ease infinite; */
 }
 
 .right {
-  position: fixed;
-  bottom: 195rpx;
+  position: absolute;
+  /* bottom: 195rpx; */
   right: 20rpx;
+  margin-right: 0;
   width: 110rpx;
   height: 110rpx;
 }
 
 .rightImage {
-  position: fixed;
-  bottom: 160rpx;
+  position: absolute;
+  /* bottom: 160rpx; */
   right: -20rpx;
   width: 180rpx;
   height: 180rpx;
-  animation: rightAnimate 2s ease infinite;
+  /* animation: rightAnimate 2s ease infinite; */
 }
+
+.btnBox {
+  display: flex;
+  margin-top: -120rpx;
+  height: 180rpx;
+  /* background: rgb(204, 223, 96); */
+  position: relative;
+}
+
 
 @keyframes leftAnimate {
   0% {
@@ -91,19 +102,20 @@
 }
 
 /* 轮播图里面的文字部分 */
-.text{
+.text {
   color: #ffffff;
-  top: 37%; 
+  top: 37%;
   left: 50%;
-  margin-left: -275rpx; 
+  margin-left: -275rpx;
   text-indent: 2em;
   text-align: left;
-  font-family:'fangsong';
+  font-family: 'fangsong';
   font-size: 35rpx;
   font-weight: bold;
   letter-spacing: 0;
   /* background-color: aquamarine; */
 }
+
 /* .introduce{
   position: absolute;
   width: 580rpx;
@@ -120,27 +132,33 @@
   letter-spacing: 0;
   background-color: royalblue;
 } */
-.introduce{
-  position: absolute;
+.introduce {
+  /* position: absolute; */
   display: flex;
   flex-direction: column;
-  justify-content:start;
+  justify-content: start;
   row-gap: 30rpx;
-  width: 580rpx;
-  height: 600rpx;
+  width: 620rpx;
+  /* height: 600rpx; */
   color: #ffffff;
-  top: 45%;
-  left: 50%;
-  margin-left: -290rpx;
+  /* top: 200rpx; */
+  /* left: 50%; */
+  /* margin-left: -290rpx; */
+  border: 2px solid #718197;
+  padding-top: 250rpx;
+  padding-bottom: 30rpx;
+  padding-left: 15rpx;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -230rpx;
+  border-radius: 30rpx;
+  background: rgba(255, 255, 255, 0.1);
 }
-.characters{
-  row-gap: 0rpx;
-}
-.version{
-  width: 101%;
+
+.version {
   text-indent: 2em;
   text-align: left;
-  font-family:'fangsong';
+  font-family: 'fangsong';
   font-size: 35rpx;
   font-weight: bold;
   letter-spacing: 0;
