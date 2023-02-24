@@ -19,11 +19,10 @@
         <radio checked="{{(directionCode==0)?true:false}}" value="前端"/>
         前端
         <radio checked="{{(directionCode==1)?true:false}}"  value="后台"/>
-        后端 
+        后台 
         <radio checked="{{(directionCode==2)?true:false}}"  value="安卓"/>
         安卓
         <radio checked="{{(directionCode==3)?true:false}}" value="UI"/>
-        
         UI
       </radio-group>
       </view>
@@ -32,10 +31,13 @@
       <view style="width: 100%;height:100rpx;color:#fff;padding-left: 30rpx;font-weight: 900;display: flex;align-items: center;">
         <view>请选择面试时间 :
         </view>
-        <button disabled="{{chooseDisabled}}" size="mini" bindtap="timeOpen" style="font-size: 16px;">点击选择</button>
+        <!-- <button disabled="{{chooseDisabled}}" size="mini" bindtap="timeOpen" style="font-size: 16px;">点击选择</button> -->
+        <picker mode="multiSelector" range="{{ multiItems }}" value="{{index}}" bindchange="handleMulti">
+       <button disabled="{{chooseDisabled}}" size="mini" bindtap="timeOpen" style="font-size: 16px;margin-left: 120rpx;margin-top: 20rpx;">点击选择
+       </button>
+       </picker>
       </view>
-      
-      
+    
     </view>
     <!-- 展示预约信息以及排队情况 -->
     <view style="width:100%;height:900rpx;margin-top: 100rpx;display: flex;justify-content: center;align-items: center;">
@@ -73,12 +75,10 @@
           </view>
         </view>
       </view>
-</view> 
-
-<!-- 组件的选择器 -->
+</view>  
 
 <!-- 显示选择时间的组件 -->
-<view style="position: fixed;top: 0;">
+<!-- <view style="position: fixed;top: 0;">
   <date-picker id="picker" range="2" step="20" start_time="10" end_time="12" bindconfirm="confirm">
 </date-picker>
-</view>
+</view> -->

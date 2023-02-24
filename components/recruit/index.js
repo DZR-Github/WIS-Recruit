@@ -78,7 +78,7 @@ Component({
         })
       } else {
         wx.request({ //点击提交后发送请求，报名
-          url: 'http://wisstudio.top/api/user/info/' + app.globalData.userId,
+          url: 'http://43.139.33.166/api/user/info/' + app.globalData.userId,
           data: {
             "userName": Data.username,
             "stuNumber": Data.stuNumber,

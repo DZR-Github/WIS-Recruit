@@ -58,7 +58,7 @@ Page({
 
     if (this.data.feedback) {
       wx.request({ //发送请求提交用户反馈
-        url: 'http://wisstudio.top/api/user/addFeedback/' + app.globalData.userId,
+        url: 'http://43.139.33.166/api/user/addFeedback/' + app.globalData.userId,
         data: {
           "content": that.data.feedback
         },

@@ -12,21 +12,34 @@ Page({
      commitDisabled:true,
      cancelDisabled:true,
      chooseDisabled:false,
+     multiItems: [['2023-03-11', '2023-03-12'], ["10:00-11:00","11:00-12:00","15:00-16:00","16:00-17:00","17:00-18:00","19:00-20:00","20:00-21:00"]],
   },
-
-  timeOpen(){
-    this.picker.showDialog();
-  },
-  confirm(e){
+  //获取用户选择的日期
+  handleMulti(e){
     this.setData({
-       selectDate:e.detail.selectDate
+      selectDate:this.data.multiItems[0][e.detail.value[0]]+
+      "    "+this.data.multiItems[1][e.detail.value[1]]
     })
     if(this.data.selectDate!="暂无"){
-      this.setData({
-        commitDisabled:false
-      })
-    }
+     this.setData({
+       commitDisabled:false
+     })
+   }
   },
+
+  // timeOpen(){
+  //   this.picker.showDialog();
+  // },
+  // confirm(e){
+  //   this.setData({
+  //      selectDate:e.detail.selectDate
+  //   })
+  //   if(this.data.selectDate!="暂无"){
+  //     this.setData({
+  //       commitDisabled:false
+  //     })
+  //   }
+  // },
   direction(e){
     this.setData({
       directionData:e.detail.value
@@ -111,7 +124,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad:function() {
-    this.picker=this.selectComponent("#picker")
+    // this.picker=this.selectComponent("#picker")
   },
  
   /**

@@ -36,7 +36,7 @@ Page({
     const that = this
     if (app.globalData.information_status === 0) { //information_status等于0时代表未发送过请求，需要发送请求获取数据；否则直接从全局变量中取值
       wx.request({ //发送请求获取个人信息
-        url: 'http://wisstudio.top/api/user/info/' + app.globalData.userId,
+        url: 'http://43.139.33.166/api/user/info/' + app.globalData.userId,
 
         header: {
           "token": app.globalData.token
