@@ -1,7 +1,7 @@
 <!--进度条页面-->
 
 <view style="width: 100vw;height: 100vh;text-align: center;">
-  <!-- <background></background> -->
+  <background></background>
   <navigator url="/pages/index/index" open-type="navigateBack">
     <view style="height: 120rpx;width: 180rpx;top: 60rpx; left: -10rpx;position: fixed;z-index: 1;">
       <image style="height: 120rpx;width: 180rpx;top: 60rpx; left: -10rpx;position: fixed;" src="../../img/back.png">
@@ -30,4 +30,7 @@
     <view class="dots" style="top: 1000rpx;left: 320rpx;background-color: red;"></view>
     <view class="text4" style="left: 350rpx;">未通过</view>
   </view>
+  <!-- <mp-dialog mask-closable="{{FALSE}}" show="{{showDialog_back}}" bindbuttontap="tapDialogBack" buttons="{{[ {text: '确认'}]}}">
+      <view style="color:black;">请先报名哦~</view>
+    </mp-dialog> -->
 </view>

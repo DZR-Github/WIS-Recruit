@@ -1,8 +1,80 @@
 .banner {
   width: 100vw;
-  height: 1300rpx;
+  /* height: 1300rpx; */
+  height: 80vh;
   text-align: center;
+  /* background-color: cornsilk; */
 }
+
+/* @media screen and (max-height: 760px) {
+  .main {
+    height: 110vh;
+  }
+
+  .banner {
+    height: 93vh;
+  }
+} */
+
+/* 小屏幕 */
+@media screen and (min-width: 480px) {
+  .main {
+    height: 110vh;
+  }
+
+  .banner {
+    height: 93vh;
+  }
+
+  .introduce-web {
+    overflow: auto;
+  }
+}
+
+/* 中等屏幕 */
+@media screen and (min-width: 768px) {
+  .banner {
+    height: 80vh;
+  }
+
+  .main {
+    height: 100vh;
+  }
+}
+
+/* 大屏幕 */
+@media screen and (min-width: 992px) {
+  .banner {
+    height: 70vh;
+  }
+
+  .main {
+    height: 100vh;
+  }
+}
+
+/* 超大屏幕 */
+/* @media screen and (min-width: 992px) {
+  .banner {
+    height: 70vh;
+  }
+
+  .main {
+    height: 100vh;
+  }
+} */
+
+/* @media screen and (min-height: 760px) {
+  .banner {
+    height: 80vh;
+  }
+
+  .main {
+    height: 100vh;
+  }
+} */
+
+
 
 .banner .wx-swiper-dot {
   width: 20rpx;
@@ -139,13 +211,14 @@
   justify-content: start;
   row-gap: 30rpx;
   width: 620rpx;
-  /* height: 600rpx; */
+  /* height: 700rpx; */
+  height: 42vh;
   color: #ffffff;
   /* top: 200rpx; */
   /* left: 50%; */
   /* margin-left: -290rpx; */
   border: 2px solid #718197;
-  padding-top: 250rpx;
+  padding-top: 200rpx;
   padding-bottom: 30rpx;
   padding-left: 15rpx;
   margin-left: auto;

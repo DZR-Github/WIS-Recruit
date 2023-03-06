@@ -11,8 +11,6 @@ Component({
     choice: 0,
     NONE: "none",
     BLOCK: "block",
-    Animate: " ", //点击'方向'的动画
-    Animate_Academy: " ", //点击'学院'的动画
     phoneDes: "",
     stuNumDes: "",
     show: false,
@@ -78,7 +76,9 @@ Component({
         })
       } else {
         wx.request({ //点击提交后发送请求，报名
-          url: 'http://43.139.33.166/api/user/info/' + app.globalData.userId,
+          url: 'http://wisstudio.top/api/user/info/' + app.globalData.userId,
+
+          // url: 'http://43.139.33.166/api/user/info/' + app.globalData.userId,
           data: {
             "userName": Data.username,
             "stuNumber": Data.stuNumber,
@@ -92,6 +92,7 @@ Component({
           },
           method: 'PUT',
           success: (result) => {
+            // console.log("报名成功！")
             app.globalData.entryStatus = 1;
             that.setData({
               showMsg: "恭喜你，报名成功！",
@@ -118,12 +119,6 @@ Component({
       })
     },
 
-    setChoice_2() {
-      this.setData({
-        choice: 1,
-        Animate_Academy: "appear_Academy 0.5s ease 1 forwards"
-      })
-    },
     choose_academy(e) {
       const that = this
       const academys = ['计算机学院', '信息工程学院', '机电工程学院', '自动化学院', '生物医药学院', '轻工化工学院', '土木与交通工程学院', '环境科学与工程学院', '外国语学院', '材料与能源学院', '物理与光电工程学院', '集成电路学院']

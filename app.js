@@ -13,6 +13,7 @@ App({
         //发送 res.code 到后台换取 userId,token
         wx.request({
           url: 'http://wisstudio.top/api/user/info',
+          // url: 'http://43.139.33.166/api/user/info/',
           data: res.code,
           method: 'POST',
           success: (result) => { //成功以后将userId跟token存到全局变量

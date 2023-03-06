@@ -1,5 +1,8 @@
 {
   "usingComponents": {
-    "background": "../../components/background/index"
+    "background": "../../components/background/index",
+    "mp-half-screen-dialog": "weui-miniprogram/half-screen-dialog/half-screen-dialog",
+    "mp-dialog": "weui-miniprogram/dialog/dialog",
+    "mp-actionSheet": "weui-miniprogram/actionsheet/actionsheet"
   }
 }

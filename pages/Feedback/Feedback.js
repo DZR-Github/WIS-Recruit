@@ -58,7 +58,8 @@ Page({
 
     if (this.data.feedback) {
       wx.request({ //发送请求提交用户反馈
-        url: 'http://43.139.33.166/api/user/addFeedback/' + app.globalData.userId,
+        url: 'http://wisstudio.top/api/user/addFeedback/' + app.globalData.userId,
+        // url: 'http://43.139.33.166/api/user/addFeedback/' + app.globalData.userId,
         data: {
           "content": that.data.feedback
         },
@@ -67,8 +68,6 @@ Page({
         },
         method: 'GET',
         success: (result) => {
-          //console.log("Get openID success!")
-          //console.log(result)
           that.setData({
             show: true
           })

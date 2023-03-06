@@ -1,10 +1,10 @@
 <!-- 主页面 -->
-<view style="width: 100vw;height: 120vh;">
+<view style="width: 100vw;height: 100vh;" class="main">
   <!-- 回退按钮 -->
-  <!-- <stars></stars> -->
+  <stars></stars>
   <navigator url="{{url}}" open-type="redirect">
-    <view style="height: 120rpx;width: 180rpx;margin-top: 40rpx;">
-      <image style="height: 120rpx;width: 180rpx;" src="../../img/back.png">
+    <view style="width: 120rpx;margin-top: 4vh;margin-left: 30rpx;">
+      <image style="height: 1.2em;width: 120rpx;" src="../../img/backIcon.png">
       </image>
     </view>
   </navigator>
@@ -13,9 +13,9 @@
 
     <swiper-item>
       <view style="position:relative;">
-        <image style="width: 500rpx;height: 443rpx;" src="http://dzrblog.asia/main_banner.png"></image>
-        <view class="introduce" style="padding-top: 250rpx;padding-bottom: 150rpx;">
-          <view class="version">
+        <image style="width: 500rpx;height: 443rpx;" src="../../img/main_banner.png"></image>
+        <view class="introduce">
+          <view class="version" style="margin-top: 20rpx;">
             WISStudio，是以网络身份安全粤港联合实验室WISLab为基础筹建的本科生研发创新团队。
           </view>
           <view class="version">
@@ -28,7 +28,7 @@
     <swiper-item>
       <view style="position: relative;">
         <image style="width: 500rpx;height: 443rpx;" src="http://dzrblog.asia/Web_banner.png"></image>
-        <view class="introduce" style="padding-top: 220rpx;">
+        <view class="introduce introduce-web">
           <view class="version">
             前端开发是创建WEB页面或小程序等前端界面呈现给用户的过程，实现互联网产品的用户界面交互，用界面将用户与计算机连接起来。
           </view>
@@ -45,7 +45,7 @@
     <swiper-item>
       <view style="position: relative;">
         <image style="width: 500rpx;height: 443rpx;" src="http://dzrblog.asia/backstage_banner.png"></image>
-        <view class="introduce" style="padding-bottom: 100rpx;">
+        <view class="introduce">
           <view class="version">
             后台是与数据和信息打交道的方向, 通过对业务的梳理和数据的交互, 为数据为前端, 移动端提供着强有力的支持, 间接通过前台体现后台价值。
           </view>
@@ -61,7 +61,7 @@
     <swiper-item>
       <view style="position: relative;">
         <image style="width: 500rpx;height: 443rpx;" src="http://dzrblog.asia/Andriod_banner.png"></image>
-        <view class="introduce" style="padding-bottom: 100rpx;">
+        <view class="introduce">
           <view class="version">
             Android系统作为世界第一大手机操作系统，使得Android应用开发炙手可热。
           </view>
@@ -77,7 +77,7 @@
     <swiper-item>
       <view style="position: relative;">
         <image style="width: 500rpx;height: 443rpx;" src="http://dzrblog.asia/UI_banner.png"></image>
-        <view class="introduce" style="padding-bottom: 300rpx;">
+        <view class="introduce">
           <view class="version">
             主要面向有经验的同学，熟悉PS，Axure等软件，有一定的审美能力，有团队协作意识，负责工作室相关项目的UI界面设计。
           </view>

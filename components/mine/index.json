@@ -1,7 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "stars": "../stars/index",
     "stars-mine": "../stars-mine/index"
   }
 }

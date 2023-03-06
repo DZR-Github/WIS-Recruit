@@ -18,6 +18,9 @@ Page({
     NONE: "none",
     finalResult: " " //最终结果
   },
+  tapDialogBack() {
+    wx.navigateBack()
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -39,7 +42,8 @@ Page({
   onShow() {
     const that = this //将this赋值给that，在请求中使用that
     wx.request({ //发送请求获取进度
-      url: 'http://43.139.33.166/api/user/progress/' + app.globalData.userId,
+      url: 'http://wisstudio.top/api/user/progress/' + app.globalData.userId,
+      // url: 'http://43.139.33.166/api/user/progress/' + app.globalData.userId,
       header: {
         "token": app.globalData.token
       },

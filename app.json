@@ -1,10 +1,12 @@
 {
   "pages": [
+
     "pages/Home/Home",
-    "pages/index/index",
     "pages/Feedback/Feedback",
     "pages/Information/Information",
+    "pages/index/index",
     "pages/Progress/Progress",
+
     "pages/Reservation/Reservation"
   ],
   "useExtendedLib": {

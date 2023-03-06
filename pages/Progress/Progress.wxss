@@ -20,7 +20,7 @@
 
 .dots {
   position: absolute;
-  left: 400rpx;
+  left: 440rpx;
   width: 20rpx;
   height: 20rpx;
   border-radius: 20rpx;
@@ -35,7 +35,7 @@
   line-height: 60rpx;
   border-radius: 30rpx;
   position: absolute;
-  left: 350rpx;
+  left: 390rpx;
   top: 30rpx;
 }
 

@@ -35,6 +35,45 @@
   color: white;
 }
 
+.Input_change {
+  width: 50vw;
+  height: 80rpx;
+  border: 1px solid gray;
+  border-radius: 10rpx;
+  /* margin: auto; */
+  /* margin-left: 2em; */
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.btn_change {
+  width: 300rpx;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.changeBox {
+  display: flex;
+  text-align: center;
+  width: 80vw;
+}
+
+.changeContainer {
+  padding-left: 10vw;
+}
+
+.Input_label {
+  height: 80rpx;
+  line-height: 90rpx;
+  width: 25vw;
+  text-align: center;
+  /* background-color: skyblue; */
+}
+
 .placeholder {
   color: rgb(228, 228, 228);
+}
+
+.pageContainer {
+  border-radius: 100rpx;
 }

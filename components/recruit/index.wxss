@@ -1,9 +1,9 @@
 .Box {
   width: 80vw;
-  height: 1000rpx;
+  /* height: 1000rpx; */
   background-color: rgba(187, 187, 198, 0.7);
   display: inline-block;
-  margin-top: 50rpx;
+  margin-top: 5vh;
   border-radius: 20rpx;
   position: relative;
 }
@@ -11,24 +11,24 @@
 .smallBox {
   text-align: start;
   width: 550rpx;
-  height: 80rpx;
+  height: 5vh;
   background-color: rgba(61, 63, 90, 0.4);
+  /* background-color: #fff; */
   margin-left: 20rpx;
-
   border-radius: 80rpx;
   padding-left: 20rpx;
-  line-height: 80rpx;
+  line-height: 4vh;
   display: flex;
 }
 
 .icon {
-  width: 80rpx;
-  height: 80rpx;
+  width: 5vh;
+  height: 5vh;
 }
 
 .Input {
   width: 400rpx;
-  height: 80rpx;
+  height: 5vh;
   margin-left: 30rpx;
   color: white;
 }
@@ -60,7 +60,7 @@
 
 .btn {
   width: 300rpx;
-  margin-top: 50rpx;
+  margin-top: 3vh;
   border-radius: 20rpx;
   background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
   color: white;

@@ -3,6 +3,7 @@
 
 <view>
   <background></background>
+  <view style="height: 100vh;width: 100vw;background-color: rgba(0,0,0,0.4);position: absolute;z-index: 5;display: {{Overlay}};"></view>
   <view style="width: 100vw;text-align: center;padding-top: 120rpx;position: relative;">
     <navigator url="/pages/index/index" open-type="navigateBack">
       <view style="height: 120rpx;width: 180rpx;top: 60rpx; left: -10rpx;position: fixed;z-index: 1;">
@@ -14,24 +15,79 @@
     <view class="Box">
       <view class="smallBox" style="margin-top: 50rpx;">
         <image class="icon" src="../../img/number.png"></image>
-        <input class="Input" value="{{stuNumber}}" disabled="true" type="text" placeholder="学号" placeholder-class="placeholder" />
+        <input class="Input" value="{{stuNumber}}" disabled="{{Disable}}" type="text" placeholder="学号" placeholder-class="placeholder" />
       </view>
       <view class="smallBox">
         <image class="icon" src="../../img/user.png"></image>
-        <input class="Input" value="{{username}}" disabled="true" type="text" placeholder="姓名" placeholder-class="placeholder" />
+        <input class="Input" value="{{username}}" disabled="{{Disable}}" type="text" placeholder="姓名" placeholder-class="placeholder" />
       </view>
       <view class="smallBox">
         <image class="icon" src="../../img/building.png"></image>
-        <input class="Input" value="{{academy}}" disabled="true" type="text" placeholder="学院" placeholder-class="placeholder" />
+
+        <input class="Input" value="{{academy}}" disabled="{{Disable}}" type="text" placeholder="学院" placeholder-class="placeholder" />
+
+
       </view>
       <view class="smallBox">
         <image class="icon" src="../../img/compass.png"></image>
-        <input class="Input" value="{{direction}}" disabled="true" type="text" placeholder="方向" placeholder-class="placeholder" />
+        <input class="Input" value="{{direction}}" disabled="{{Disable}}" type="text" placeholder="方向" placeholder-class="placeholder" />
       </view>
       <view class="smallBox">
         <image class="icon" src="../../img/phone.png"></image>
-        <input class="Input" value="{{phoneNum}}" disabled="true" type="text" placeholder="手机号" placeholder-class="placeholder" />
+        <input class="Input" value="{{phoneNum}}" disabled="{{Disable}}" type="text" placeholder="手机号" placeholder-class="placeholder" />
       </view>
+
     </view>
+    <button bindtap="open" style="width: 300rpx;margin-top: 30rpx;">修改资料</button>
+
+    <page-container show="{{show}}" overlay="{{overlay}}">
+      <view style="font-size: large;font-weight: 800;margin-top: 20rpx;margin-bottom: 20rpx;">
+        修改个人资料
+      </view>
+      <form catchsubmit="commit">
+        <view class="changeContainer">
+          <view class="changeBox">
+            <view class="Input_label">学号:</view>
+            <input class="Input_change" name="stuNumber" bindblur="stuNumInput" type="number" maxlength="10" value="{{stuNumber_change}}" placeholder="学号" />
+          </view>
+          <view style="color:red;height: 1em;margin-top: -20rpx;">
+            {{stuNumDes}}
+          </view>
+          <view class="changeBox">
+            <view class="Input_label">姓名:</view>
+            <input class="Input_change" name="username" type="text" value="{{username_change}}" placeholder="姓名" />
+          </view>
+          <view class="changeBox">
+            <view class="Input_label">学院:</view>
+            <picker bindchange="bindPickerChange" range="{{array}}">
+              <input class="Input_change" name="academy" type="text" disabled="true" value="{{academy_change}}" placeholder="学院" />
+            </picker>
+          </view>
+          <view class="changeBox">
+            <view class="Input_label">方向:</view>
+            <input class="Input_change" name="direction" bindtap="setActionsheet" disabled="true" value="{{direction_change}}" placeholder="方向" type="text" />
+          </view>
+          <view class="changeBox">
+            <view class="Input_label">手机号:</view>
+            <input class="Input_change" name="phoneNum" bindblur="mobileInput" type="number" maxlength="11" value="{{phoneNum_change}}" placeholder="手机号" />
+          </view>
+          <view style="height:1em;color:red;margin-top: -20rpx;">
+            {{phoneDes}}
+          </view>
+        </view>
+        <view style="display: flex;">
+          <button class="btn_change" style="background-color: #07c160;" form-type="submit">确定</button>
+          <button class="btn_change" bindtap="exit">取消</button>
+        </view>
+      </form>
+    </page-container>
+    <mp-dialog title="" show="{{showDialog}}" bindbuttontap="tapDialogButton" buttons="{{[ {text: '确认'}]}}">
+      <view style="color:black;">{{showMsg}}</view>
+    </mp-dialog>
+    <mp-dialog mask-closable="{{FALSE}}" show="{{showDialog_back}}" bindbuttontap="tapDialogBack" buttons="{{[ {text: '确认'}]}}">
+      <view style="color:black;">请先报名哦~</view>
+    </mp-dialog>
+    <mp-actionSheet bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{groups}}">
+    </mp-actionSheet>
   </view>
 </view>

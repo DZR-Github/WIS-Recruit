@@ -1,4 +1,4 @@
-<!--pages/Feedback/Feedback.wxml-->
+<!-- pages/Feedback/Feedback.wxml -->
 <!-- 用户反馈、评价页 -->
 <view style="text-align: center;">
   <background></background>
@@ -10,7 +10,6 @@
   </navigator>
   <form catchsubmit="commit">
     <view class="feedbackBox">
-      <!-- <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea> -->
       <textarea bindblur="setFeedback" style="width: 490rpx;" value="{{feedback}}" placeholder="请在此处输入您的反馈" maxlength="-1" auto-height />
     </view>
     <button class="btn" form-type="submit">提交</button>
@@ -20,6 +19,4 @@
   </mp-dialog>
 
 
-  <!-- <mp-actionSheet bindactiontap="btnClick" show="{{showActionsheet}}" actions="{{groups}}">
-  </mp-actionSheet> -->
 </view>

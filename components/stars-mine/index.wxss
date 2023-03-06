@@ -3,6 +3,7 @@
   top: -100rpx;
   left: 350rpx;
   transform: rotate(30deg);
+  width: 100vw;
 }
 
 .shooting_star {

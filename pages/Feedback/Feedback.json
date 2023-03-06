@@ -2,6 +2,7 @@
   "usingComponents": {
     "background": "../../components/background/index",
     "mp-dialog": "weui-miniprogram/dialog/dialog",
-    "mp-actionSheet": "weui-miniprogram/actionsheet/actionsheet"
+    "mp-actionSheet": "weui-miniprogram/actionsheet/actionsheet",
+    "stars": "../../components/stars/index"
   }
 }

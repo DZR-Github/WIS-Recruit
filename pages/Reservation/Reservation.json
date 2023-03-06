@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "date-picker":"../../components/date-picker/date-picker",
-    "background": "../../components/background/index"
+    "background": "../../components/background/index",
+    "mp-dialog": "weui-miniprogram/dialog/dialog"
   }
 }
